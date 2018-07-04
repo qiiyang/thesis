@@ -33,6 +33,8 @@ Aharon/*.*
 *.blg
 *.log
 *.toc
+*.lof
+*.lot
 *Notes.bib
 
 # No Zip files
