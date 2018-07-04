@@ -1,0 +1,40 @@
+######
+# No links
+*.lnk
+
+# No .pyc
+*.pyc
+
+# No backup  files
+*.*~
+*.bak
+*.old
+run*.*
+
+# No python cache
+__pycache__
+
+# No comment files
+*.txt
+
+# Not Aharon's Folder
+Aharon/*.*
+
+# No docx
+*.docx
+*.tmp
+
+# No media and LaTex Generated files
+*.pdf
+*.eps
+*.png
+*.aux
+*.bbl
+*.blg
+*.log
+*.toc
+*Notes.bib
+
+# No Zip files
+*.zip
+*.7z
