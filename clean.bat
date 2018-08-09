@@ -6,4 +6,6 @@ del *.log
 del *.toc
 del *.lot
 del *.lof
+del *.bcf
+del *.xml
 del *Notes.bib

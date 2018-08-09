@@ -35,7 +35,10 @@ Aharon/*.*
 *.toc
 *.lof
 *.lot
+*.bcf
+*.xml
 *Notes.bib
+*-blx.bib
 
 # No Zip files
 *.zip

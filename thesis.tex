@@ -2,8 +2,14 @@
 
 \usepackage{suthesis-2e}
 
-\usepackage[square,numbers,sort&compress]{natbib}
-\bibliographystyle{apsrev4-1}
+% For Bibliography
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=chem-acs, citestyle=phys, backend=bibtex8, bibencoding=ascii, doi=true]{biblatex}
+\addbibresource{bib_ours.bib}
+\addbibresource{bib_general.bib}
+\addbibresource{bib_EuS.bib}
+
 
 \usepackage{bm}        % for math
 \usepackage{amssymb}   % for math
@@ -13,11 +19,13 @@
 
 \usepackage[caption=false]{subfig}  % for sub-references
 \usepackage{color}
-\usepackage[colorlinks=true, breaklinks=true, bookmarks=false, linkcolor=blue, urlcolor=blue, citecolor=blue,]{hyperref}
+\usepackage[hyperfootnotes=false, colorlinks=false, breaklinks=true, bookmarks=false]{hyperref}	% for hyperlinks
 
-\usepackage[symbol]{footmisc}
-\usepackage{tabularx}
-\usepackage{ltablex}
+
+\usepackage[perpage, symbol*]{footmisc}	% for footnote symbols
+
+\usepackage{tabularx}	% for tables
+\usepackage{ltablex}	% for tables
 
 \usepackage{CJK}
 
@@ -45,7 +53,7 @@ This dissertation is dedicated to my grandparents, who showed me with their word
 
 
 \prefacesection{Abstract}
-    Abstract
+    Abstract 
 
 
 \prefacesection{Acknowledgments}
@@ -74,12 +82,12 @@ Pulsed laser deposition (PLD) is a thin film growth method that utilizes high en
     \section{Electron Transport: Van der Pauw Method}
     \section{Measurement Automation: Python and Parallel Computing}
 
-
-\chapter[Europium(II) Sulfide: An Insulating Ferromagnet]{Europium(II) Sulfide: An Insulating Ferromagnet\protect\footnote{A part of this chapter is adapted from Appl. Phys. Lett. 104, 082402 (2014) \cite{EuS_PLD} \href{https://dx.doi.org/10.1063/1.4866265}{doi:10.1063/1.4866265}, with the permission of AIP Publishing.}}
+\chapter{Europium(II) Sulfide: An Insulating Ferromagnet}
+\footnote[2]{A part of this chapter is adapted from \cite{EuS_PLD} Appl. Phys. Lett. 104, 082402 (2014)  \href{https://dx.doi.org/10.1063/1.4866265}{doi:10.1063/1.4866265}, with the permission of AIP Publishing.}
 \input{ch_EuS.tex}
 
-\chapter[Bismuth(III) Selenide on Europium(II) Sulfide]{Bismuth(III) Selenide on Europium(II) Sulfide\protect\footnote{A part of this chapter is adapted from Appl. Phys. Lett. 104, 082402 (2014) \cite{EuS_PLD} \href{https://dx.doi.org/10.1063/1.4866265}{doi:10.1063/1.4866265}, with the permission of AIP Publishing.}}
-...
+\chapter{Bismuth(III) Selenide on Europium(II) Sulfide}
+\footnote[2]{A part of this chapter is adapted from Appl. Phys. Lett. 104, 082402 (2014) \cite{EuS_PLD} \href{https://dx.doi.org/10.1063/1.4866265}{doi:10.1063/1.4866265}, with the permission of AIP Publishing.}
 
 
 \chapter{Bismuth Doped Antimony(III) Telluride on Europium(II) Sulfide}
@@ -90,5 +98,6 @@ Pulsed laser deposition (PLD) is a thin film growth method that utilizes high en
 \appendix
 \chapter{Summary of Acronyms, Symbols and Chemical Formulae}
     \input{ap_symbols.tex}
-\bibliography{bib_ours,bib_general,bib_EuS}
+    
+\printbibliography
 \end{document}
