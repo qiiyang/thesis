@@ -37,6 +37,7 @@ Aharon/*.*
 *.lot
 *.bcf
 *.xml
+*.out
 *Notes.bib
 *-blx.bib
 

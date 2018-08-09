@@ -8,4 +8,5 @@ del *.lot
 del *.lof
 del *.bcf
 del *.xml
+del *.out
 del *Notes.bib

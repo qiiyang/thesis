@@ -5,7 +5,9 @@
 % For Bibliography
 \usepackage[american]{babel}
 \usepackage{csquotes}
-\usepackage[style=chem-acs, citestyle=phys, backend=bibtex8, bibencoding=ascii, doi=true]{biblatex}
+\usepackage[style=phys, citestyle=phys,%
+    articletitle=false, biblabel=brackets, chaptertitle=false, pageranges=false, %APS style
+    backend=bibtex8, bibencoding=ascii, doi=true]{biblatex}
 \addbibresource{bib_ours.bib}
 \addbibresource{bib_general.bib}
 \addbibresource{bib_EuS.bib}
@@ -18,8 +20,20 @@
 \usepackage{siunitx}    % for degree Celcius etc
 
 \usepackage[caption=false]{subfig}  % for sub-references
+
+% for hyperlinks
 \usepackage{xcolor}
-\usepackage[colorlinks=true, breaklinks=true, bookmarks=false, linkcolor=black, urlcolor=blue, citecolor=black,]{hyperref}
+\definecolor{linkAccentColor}{HTML}{0696bb} % Bauhaus Itten cyan
+\usepackage[colorlinks=false, breaklinks=true, bookmarks=true, linktocpage=true]{hyperref}
+\hypersetup{%
+  colorlinks=false,% hyperlinks will be coloured
+  linkcolor=black,% hyperlink text will be {}
+  linkbordercolor=linkAccentColor,% hyperlink border will be {}
+  urlbordercolor=linkAccentColor,% hyperlink border will be {}
+  citebordercolor=linkAccentColor,% hyperlink border will be {}
+  pdfborderstyle={/S/U/W 1}% Overrides border style set with colorlinks=true
+                          % Hyperlink border style will be underline of width 1pt
+}
 
 
 \usepackage[perpage, symbol*]{footmisc}	% for footnote symbols
@@ -92,7 +106,7 @@ American Physical Society.}
 
 
 \chapter{Bismuth Doped Antimony(III) Telluride on Europium(II) Sulfide}
-\footnote[2]{A part of this chapter is adapted from {\color{red}INSERT CITATION}, with permission of the publisher. Copyright (2013) by the
+\footnote[2]{A part of this chapter is adapted from ~\cite{bilayer2018}~\fullcite{bilayer2018}, with permission of the publisher. Copyright (2018) by the
 American Physical Society.}
 ...
 
@@ -101,6 +115,6 @@ American Physical Society.}
 \appendix
 \chapter{Summary of Acronyms, Symbols and Chemical Formulae}
     \input{ap_symbols.tex}
-    
+
 \printbibliography
 \end{document}
