@@ -17,9 +17,6 @@ __pycache__
 # No comment files
 *.txt
 
-# Not Aharon's Folder
-Aharon/*.*
-
 # No docx
 *.docx
 *.tmp
@@ -27,6 +24,7 @@ Aharon/*.*
 # No media and LaTex Generated files
 *.pdf
 *.eps
+*.svg
 *.png
 *.aux
 *.bbl
