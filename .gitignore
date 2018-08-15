@@ -23,6 +23,7 @@ __pycache__
 
 # No media and LaTex Generated files
 *.pdf
+*.ai
 *.eps
 *.svg
 *.png
