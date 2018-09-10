@@ -43,3 +43,6 @@ __pycache__
 # No Zip files
 *.zip
 *.7z
+
+# No analysis files
+analysis/
