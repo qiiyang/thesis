@@ -1,4 +1,4 @@
-The weak localization and the weak anti-localization effects are quantum interference effects that lead to electric conductivity deviating from classical values predicted by the Drude model. In the context of this thesis, we will concentrate on the two-dimensional case. A detailed treatise of the weak localization and the weak anti-localization effects can be found in ref.~\cite{bergmann2984}. Here I will outline a qualitative description of the effects, and state the quantitative models given by refs.~\cite{bergmann2984, anderson1979, WL_HLN, WAL_theory, WL_Khmel}.
+The weak localization and the weak anti-localization effects are quantum interference effects that lead to electric conductivity deviating from classical values predicted by the Drude model. In the context of this thesis, we will concentrate on the two-dimensional case. A detailed treatise of the weak localization and the weak anti-localization effects can be found in ref.~\cite{bergmann1984}. Here I will outline a qualitative description of the effects, and state the quantitative models given by refs.~\cite{bergmann1984, anderson1979, WL_HLN, WAL_theory, WL_Khmel}.
 
 In a two-dimensional medium where finite disorder is present, consider electron scattering paths around a loop back to the same point and invert the direction of travel: for every possible scattering path there exists a path that is counter-propagating, but otherwise identical (fig.~\ref{fig:bg_scattering}a).%
 \begin{figure}[ht]%
@@ -7,7 +7,41 @@ In a two-dimensional medium where finite disorder is present, consider electron 
     \caption[Schematic illustrations of electron scattering paths in two-dimensions.]{\label{fig:bg_scattering}Illustration of electron scattering paths in a two-dimensional medium where finite disorder is present. (a)~For every scattering path there is a counter propagating, but otherwise identical, counterpart. (b) Each path in the real space involves a 180\degree{} rotation of the momentum, with the two paths rotate towards the opposite directions.}%
 \end{figure}%
 
-In absence of spin-orbit coupling, the two paths introduce exactly the same phase change to the incidental electron wave function and therefore interfere constructively, hence the probability for the electron to travel backwards is increased. The electric resistance increases as consequence of the constructive interference of all such pairs of paths. This is referred to as the weak localization effect. A magnetic field perpendicular to such two-dimensional medium introduces a phase difference $\Delta\varphi = 2\cdot\frac{eBA}{\hbar}$ between a pair of counter-propagating loop enclosing an area $A$. Since the loops formed by different pairs of paths have different sizes, a magnetic field through the loops introduces different phase differences in different pairs. Therefore the weak localization effect is rapidly suppressed by a perpendicular magnetic field, and manifests as a sharp negative magnetoresistance or equivalently a sharp positive magnetoconductance in addition to the parabolic classical magnetoresistance (an example can be found in ref.~\cite{bishop1982}).
+In absence of strong spin-orbit coupling, the two paths introduce exactly the same phase change to the incidental electron wave function and therefore interfere constructively, hence the probability for the electron to travel backwards is increased. The electric resistance increases as consequence of the constructive interference of all such pairs of paths. This is referred to as the weak localization effect. A magnetic field perpendicular to such two-dimensional medium introduces a phase difference $\Delta\varphi = 2\cdot\frac{eBA}{\hbar}$ between a pair of counter-propagating loop enclosing an area $A$. Since the loops formed by different pairs of paths have different sizes, a magnetic field through the loops introduces different phase differences in different pairs. Therefore the weak localization effect is rapidly suppressed by a perpendicular magnetic field, and manifests as a sharp negative magnetoresistance or equivalently a sharp positive magnetoconductance in addition to the parabolic classical magnetoresistance (an example can be found in ref.~\cite{bishop1982}).
 
 When the two-dimensional medium exhibits strong spin-orbit coupling, the opposite effect occurs. Two counter-propagating but otherwise identical scattering paths that invert the direction of travel are represented in the momentum space as two paths that are counter-propagating but otherwise centrosymmetric to each other. These two paths are topologically equivalent to two connected semicircles that encircle the origin. Because of the strong spin-orbit coupling, the two paths result in electron spin rotating 180\degree{} towards the opposite directions. Since electrons are spin-half fermions, this results in a $\Delta\varphi=\pi$ phase difference between the two paths. Consequently, the electric resistance is reduced from its classical value. This is referred to as the weak anti-localization effect, and manifests as a sharp positive magnetoresistance or equivalently a sharp negative magnetoconductance in addition to the parabolic classical magnetoresistance (e.g., ref.~\cite{TI_WAL_Hongkong}).
 
+In absence of either spin-orbit coupling or magnetic (spin-flipping) scattering, the weak localization effect produces a correction to electric conductance $\Delta\sigma = \sigma - \sigma_{classical}$ that is proportional to the logarithmic of temperature~\cite{anderson1979, dolan1979}:%
+\begin{equation}\label{eq:wl_T}
+    \Delta\sigma \propto \log(T)
+\end{equation}%
+When spin-orbit coupling or magnetic scattering or both are present, the correction term due to weak localization or weak anti-localization behave more complex as a function of temperature or inelastic scatterings (ref.~\cite{bergmann1984}: fig.~4.1) therefore is more difficult to interpret.
+
+The magneto-transport properties due to weak localization and weak anti-localization effects is described by the Hikami-Larkin-Nagaoka formula~\cite{WL_HLN, bergmann1984}:%
+\begin{equation}\label{eq:hln}
+    \Delta\sigma(H) = \sigma_0\left[f\left(\frac{H_1}{H}\right) - \frac{3}{2}f\left(\frac{H_2}{H}\right) + \frac{1}{2}f\left(\frac{H_3}{H}\right)\right]
+\end{equation}%
+where%
+\begin{equation}\label{eq:sigma0}
+    \sigma_0 = \frac{e^2}{2\pi^2\hbar}
+\end{equation}
+\begin{equation}
+    f(z) = \ln(z) - \psi(z)
+\end{equation}
+$\psi(z)$ being the digamma function. The three scaling denominators for the applied magnetic field are related to the characteristic fields of different types:%
+\begin{align}
+    H_1 &= H_e + H_{so} + H_s\nonumber\\
+    H_2 &= \frac{4}{3}H_{so} + \frac{2}{3}H_s + H_\phi\\
+    H_3 &= 2H_s + H_\phi\nonumber
+\end{align}
+Each of the characteristic magnetic fields $H_i$ is related to the mean-free-length of a scattering type, $l_i$, by
+\begin{equation}
+    H_i = \frac{\hbar}{4el_i^2}
+\end{equation}
+The subscripts denote the scattering type:%
+\begin{description}
+    \item [$e:$] elastic scattering
+    \item [$so:$] spin-orbit scattering
+    \item [$s:$] magnetic (spin-flipping) scattering
+    \item [$\phi:$] inelastic (dephasing) scattering
+\end{description}
