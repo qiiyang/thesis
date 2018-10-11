@@ -27,6 +27,10 @@ __pycache__
 *.eps
 *.svg
 *.png
+*.pngo
+*.emf
+*.wmf
+*.jpg
 *.aux
 *.bbl
 *.blg
