@@ -77,23 +77,11 @@
 \captionsetup{width=0.95\columnwidth}%
 \chapter{Introduction}
     ...
-
-\chapter{Theoretical Background}
-    \section{Topological Insulators and Ferromagnetism}\label{sec:TI-FM}
-...
-    \section{Weak (Anti-)Localization Effects}\label{sec:wl}
-\input{tex_background/sec_wl.tex}
 	
     
 \chapter{Experimental Methods}
-    \section{Thin Film Growth: Pulsed Laser Deposition}
-Pulsed laser deposition (PLD) is a thin film growth method that utilizes high energy laser photons. A pulsed laser beam is focused and transmitted 
-\begin{figure}[ht]%
-    \includegraphics[width=0.618\columnwidth]{figs_methods/PLD_schematic.png}%
-    \caption[A simple schematic of PLD]{\label{fig:PLD_schematic}Schematic of a simple configuration of PLD, licensed from Wikimedia Commons under Creative Commons CC0 1.0 Universal Public Domain Dedication.}%
-\end{figure}%
- 
-    
+    \section{Thin Film Growth: Pulsed Laser Deposition}\label{sec:pld}
+		\input{tex_methods/sec_pld.tex}
     \section{Superconducting Quantum Interference Device (SQUID) Magnetometry}
     \section{AC Magnetic Susceptibility by Mutual Inductance}
     \section{Electron Transport: Van der Pauw Method}
@@ -116,8 +104,13 @@ Pulsed laser deposition (PLD) is a thin film growth method that utilizes high en
 \label{ch:conclusions}
      ...
 \appendix
+%
+\chapter{Theoretical Topics}
+\section{Weak (Anti-)Localization Effects}\label{sec:wl}
+\input{tex_background/sec_wl.tex}
+%
 \chapter{Summary of Acronyms, Symbols and Chemical Formulae}
     \input{ap_symbols.tex}
-
+%
 \printbibliography
 \end{document}
