@@ -4,11 +4,28 @@ Pulsed laser deposition (PLD) is a thin film growth method that utilizes high en
     \includegraphics[width=0.618\columnwidth]{figs_methods/PLD_schematic.png}%
     \caption[Schematic Illustration of a PLD apparatus]{\label{fig:PLD_schematic}A schematic illustration of a pulsed laser deposition apparatus, licensed from Wikimedia Commons under Creative Commons CC0 1.0 Universal Public Domain Dedication.}%
 \end{figure}%
-While a PLD apparatus is relatively simple, the physical processes involved in PLD thin film growth are typically complex. Because of the photon energy of the laser, and the time scales involved in the ablation, the plume's propagation, and the nucleation, each of these stages often involves non-equilibrium processes and coexistence of multiple phases, depending on both the deposition parameters and the source material. While the entirety of physics and novel techniques involved in PLD is still a subject of ongoing research and outside the scope of this thesis, key characters and complications of PLD's various components and processes are outlined in this section, whereas detailed treatise and review can be found in refs.~\cite{PLD_book, PLD_review}.
 
-The typical wavelength used for PLD, achieved by either Nd$^{3+}$:YAG or excimer lasers, is ultraviolet and ranges between \SI{150}{nm} and \SI{400}{nm}. The work documented in this thesis was done with a KrF excimer laser, which has the highest gain among the available choices. Its \SI{248}{nm} wavelength corresponds to a photon energy of \SI{5}{eV}, similar to the first ionization energy of alkaline metals (\SI{5.1}{eV} for Na $\to$ Na$^+$), and equivalent to a temperature $T~=~6 \times~10^5~\mathrm{K}$. The laser pulses have \SI{25}{ns} width and are typically generated at repetition rates on the order of \SI{10}{Hz}. Possible ablation mechanisms resulted from the interaction between the laser photons and the target surface include well understood phenomena, such as collisional sputtering, evaporation, electronic sputtering, exfoliation, and hydrodynamic formation of droplets, as well as less understood secondary phenomena documented in sec.~3.3 of ref.~\cite{PLD_book}.
+While a PLD apparatus is relatively simple, the physical processes involved in PLD thin film growth are typically complex. Table~\ref{tab:pld_params} shows the typical set of parameters characterizing a PLD procedure. %
+%
+\begin{table}[ht]%
+    \centering%
+    \begin{tabularx}{0.90\columnwidth}[t]{l|l|X}
+		\hline\hline
+        Parameters & Values & Comments\\
+        \hline%
+        photon wavelength & 248~nm & determined by the laser hardware\\
+		pulse width & 25~ns & determined by the laser hardware\\
+		repetition rate & 5--10~Hz &\\
+		fluence & 0.5--1.0~J~/~cm$^2$ & energy density per pulse\\
+		background gas & vacuum, or Ar with H$_2$ &\\
+		pressure & 10$^{-7}$~Torr~--~0.2~Torr &\\
+        target-sample distance & 5cm &\\
+		\hline\hline
+    \end{tabularx}%
+    \caption[Pulsed laser deposition parameters.]{\label{tab:pld_params}Summary of pulsed laser deposition parameters, and their typical values in experiments presented in this thesis. The first two parameters are determined by the laser hardware, whereas the rest are tunable.}%
+\end{table}%
+Because of the photon energy of the laser, and the time scales involved in the ablation, the plume's propagation, and the nucleation, each of these stages often involves non-equilibrium processes and coexistence of multiple phases, depending on both the deposition parameters and the source material. While the physics and novel techniques involved in PLD is still a subject of ongoing research and a comprehensive discussion is outside the scope of this thesis, key characters and complications of PLD's various components and processes are outlined in this section, whereas detailed treatise and review can be found in refs.~\cite{PLD_book, PLD_review}.
 
-The ``plasma plume'' is typically constituted of both charge-neutral vapor and charged plasma, often exhibiting a visible color. The plasma temperatures measured by emission spectroscopy during the initial expansion are typically on the order of $\sim$\SI{10000}{K}, considerably higher than the boiling temperature of the source material. Such phenomena is currently attributed to the inverse Bremsstrahlung absorption of the laser photons.
+The typical wavelength used for PLD, achieved by either Nd$^{3+}$:YAG or excimer lasers, is ultraviolet and ranges between \SI{150}{nm} and \SI{400}{nm}. The work documented in this thesis was done with a KrF excimer laser, which has the highest gain among the available choices. Its \SI{248}{nm} wavelength corresponds to a photon energy of \SI{5}{eV}, similar to the first ionization energy of alkaline metals (\SI{5.1}{eV} for Na $\to$ Na$^+$), equivalent to a temperature $T=6\times10^5~\mathrm{K}$. The laser pulses have \SI{25}{ns} width and are typically generated at repetition rates on the order of \SI{10}{Hz}. Possible ablation mechanisms resulted from the interaction between the laser photons and the target surface include well understood phenomena, such as collisional sputtering, evaporation, electronic sputtering, exfoliation, and hydrodynamic formation of droplets, as well as less understood secondary phenomena documented in sec.~3.3 of ref.~\cite{PLD_book}. The ablation of the target by a laser pulse generates a plasma plume, and modifies the target surface for all the subsequent pulses that irradiate on the same area.
 
-%In addition to producing the plasma plumes, the ablation resulted from a laser pulse also modifies the target surface for all the subsequent pulses that irradiate on the same area.
-
+The plasma plume is typically constituted of both charge-neutral vapor and charged plasma, often exhibiting a visible color. The plasma temperatures measured by emission spectroscopy during the initial expansion are typically on the order of $\sim$\SI{10000}{K}, considerably higher than the boiling temperature of the typical source materials. Such phenomena is currently attributed to the inverse-Bremsstrahlung absorption of the laser photons. Additionally to vapor and plasma, common but less understood components of the plasma plume are liquid droplets or solid pieces. They are either ejected from the target due to partial evaporation, or condensed from vapor due to supersaturation. The former origin typically results in droplets or pieces with sizes in the micron or sub-micron ranges, whereas the latter yields sizes in the nanometer range. Such droplets and pieces form particulates in the resultant thin films, generally detrimental to sample quality.
