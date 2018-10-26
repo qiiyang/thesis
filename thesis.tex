@@ -43,6 +43,7 @@
 
 
 \usepackage[perpage, symbol*]{footmisc}	% for footnote symbols
+\usepackage{enumitem}
 
 \usepackage{tabularx}	% for tables
 \setlength{\extrarowheight}{2pt}	% row padding
@@ -82,10 +83,9 @@
 \chapter{Experimental Methods}
     \section{Thin Film Growth: Pulsed Laser Deposition}\label{sec:pld}
 		\input{tex_methods/sec_pld.tex}
-    \section{Superconducting Quantum Interference Device (SQUID) Magnetometry}
-    \section{AC Magnetic Susceptibility by Mutual Inductance}
-    \section{Electron Transport: Van der Pauw Method}
-    \section{Measurement Automation: Python and Parallel Computing}
+    \section{Electron Transport: Sheet Resistance and the Hall Effect}
+		\input{tex_methods/sec_vdp.tex}
+    \section{Magnetometry: SQUID \& AC}
 
 \chapter{Europium(II) Sulfide: An Insulating Ferromagnet}
 \label{ch:EuS}\input{tex_results/ch_EuS.tex}

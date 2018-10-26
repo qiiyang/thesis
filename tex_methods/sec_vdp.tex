@@ -1,0 +1,51 @@
+In a conductor, in absence of a magnetic field, Ohm's Law can be expressed globally, in terms of the voltage ($V$), the current ($I$), and the resistance ($R$):%
+\begin{equation}%
+    V = I R~;%
+\end{equation}%
+or locally, in terms of electric field ($\mathbf{E}$), the current density ($\mathbf{J}$), and the resistivity ($\rho$):%
+\begin{equation}%
+    \mathbf{E} = \rho \mathbf{J}~.%
+\end{equation}%
+
+In a three-dimensional rectangular cuboid conductor with length $l$, width $w$ and thickness $t$, a uniform current passing though along its length yields a current density $J_{3D} = \frac{I}{wt}$. Assuming a uniform resistivity, the electric field is also uniformly distributed: $E = \frac{V}{l}$. The resistivity and resistance are thus related in three dimensions:%
+\begin{equation}%
+    \rho_{3D} = \frac{wt}{l}R~.%
+\end{equation}%
+
+In the two-dimensional case, consider a conductor with length $l$ and width $w$, a uniform current passing along its length results in a 2D current density $J_{2D} = \frac{I}{w}$. The 2D resistivity and the resistance are therefore related by:%
+\begin{equation}\label{eq:2D_rho}%
+	\rho_{2D} = \frac{w}{l}R~.%
+\end{equation}%
+In such case, the resistivity has the same dimension as the resistance. When the length and width are equal, the resistance is referred to as the sheet resistance, and is equivalent to the 2D resistivity:%
+\begin{equation}%
+	R_{\Box} = \rho_{2D}~.%
+\end{equation}
+
+In thin films, the 2D model is more appropriate than the 3D model, especially when their thicknesses are in the nanometer r\'egime and comparable to the lattice constants of the materials. Due to possible surface and interface effects, the 3D resistivity might vary in a thin film as a function of the distance to the surface or interface with the substrate. On the other hand, for macroscopic conducting thin films, edge effects should only play a minimal role in electric conduction. By integrating the 3D conductivity over the thickness of the film,%
+\begin{equation}%
+	\frac{1}{R_\Box} = \frac{1}{\rho_{2D}} = \int_0^t\frac{1}{\rho_{3D}(z)}dz~,%
+\end{equation}%
+the variation of 3D resistivity is circumvented by using the 2D resistivity, or equivalently the sheet resistance.
+
+The sheet resistance and the Hall effect can be measured in a thin film with either the Hall bar configuration (fig.~\ref{fig:transport_meas}a) or the van der Pauw method (fig.~\ref{fig:transport_meas}b).%
+\begin{figure}[ht]%
+	\centering%
+    \includegraphics[width=0.8\columnwidth]{figs_misc/transport_meas}%
+    \caption[Hall bar and van der Pauw configuration]{\label{fig:transport_meas}(a)~A simple variant of the Hall bar configuration, and (b)~a van der Pauw configuration. The blue shape denote the samples, whereas the numbered or labeled orange area denotes metallic Ohmic contacts.}%
+\end{figure}%
+
+The Hall bar configuration requires precise geometry. A current is passed between the source and the drain electrodes, and the narrow branches together with the attached electrodes form the voltage leads. The voltage is measured between electrodes 1 and 2 for the sheet resistance, and between 1 and 3, or 2 and 4, for the Hall effect. The 2D resistivity, hence the sheet resistance, is calculated according to eqn.~\ref{eq:2D_rho}. The length and the width, $l$ and $w$, need therefore to be measured precisely. To ensure that the voltage is measured in a region of uniform current density, the voltage leads ideally need to be far from the current electrodes: $l', l" \gg w$. To void disrupt the current distribution significantly, the voltage leads also need to be narrow and far away from each other: $a \ll w, l$.
+
+The van der Pauw method, on the other hand, does not require precise geometry. Such method makes the following assumptions~\cite{VdP1958}:%
+\begin{enumerate}[label={\alph*)}]
+    \item The contacts are much smaller than the sample.
+    \item The contacts all intersect with the circumference of the sample.
+    \item The sample has uniform 2D resistivity everywhere.
+    \item The sample is singly connected, namely does not have isolated holes.
+\end{enumerate}%
+The sheet resistance $R_\Box$ may be obtained by combining two resistance measurements: %
+\begin{align}
+    R_{12,34} &= \frac{V_{34}}{I_{12}}\nonumber\\
+    R_{13,24} &= \frac{V_{24}}{I_{13}}~,
+\end{align}%
+where the subscripts on $V$ and $I$ denote the electrodes to measure between. Irrespective of the shape of the sample, the 
