@@ -79,38 +79,54 @@
 \chapter{Introduction}
     ...
 	
-    
-\chapter{Experimental Methods}
+\chapter{Experimental Methods}\label{ch:methods}
+\begin{refsection}   
     \section{Thin Film Growth: Pulsed Laser Deposition}\label{sec:pld}
 		\input{tex_methods/sec_pld.tex}
     \section{Electron Transport: Sheet Resistance and the Hall Effect}
 		\input{tex_methods/sec_vdp.tex}
     \section{Magnetometry: SQUID \& AC}
+    \printbibliography[heading=subbibintoc, title=References for Chapter~\ref{ch:methods}]
+\end{refsection} 
 
-\chapter{Europium(II) Sulfide: An Insulating Ferromagnet}
-\label{ch:EuS}\input{tex_results/ch_EuS.tex}
+\chapter{Europium(II) Sulfide: An Insulating Ferromagnet}\label{ch:EuS}
+\begin{refsection} \input{tex_results/ch_EuS.tex}
+    \printbibliography[heading=subbibintoc, title=References for Chapter~\ref{ch:EuS}]
+\end{refsection} 
 
-\chapter{Bismuth(III) Selenide on Europium(II) Sulfide}
-\label{ch:bilayer2014}\input{tex_results/ch_bilayer2014.tex}
+\chapter{Bismuth(III) Selenide on Europium(II) Sulfide}\label{ch:bilayer2014}
+\begin{refsection} 
+    \input{tex_results/ch_bilayer2014.tex}
+    \printbibliography[heading=subbibintoc, title=References for Chapter~\ref{ch:bilayer2014}]
+\end{refsection} 
 
+\chapter{Bismuth-Antimony(III) Telluride on Europium(II) Sulfide}\label{ch:bilayer2018}
+\begin{refsection}
+    \input{tex_results/ch_bilayer2018.tex}
+    \printbibliography[heading=subbibintoc, title=References for Chapter~\ref{ch:bilayer2018}]
+\end{refsection}
 
-\chapter{Bismuth-Antimony(III) Telluride on Europium(II) Sulfide}
-\label{ch:bilayer2018}\input{tex_results/ch_bilayer2018.tex}
-
-\chapter{Conduction Model Comparisons}
-\label{ch:models}\input{tex_results/ch_models.tex}
+\chapter{Conduction Model Comparisons}\label{ch:models}
+\begin{refsection} 
+    \input{tex_results/ch_models.tex}
+    \printbibliography[heading=subbibintoc, title=References for Chapter~\ref{ch:models}]
+\end{refsection}
 
 \chapter{Conclusions}
 \label{ch:conclusions}
      ...
 \appendix
 %
-\chapter{Theoretical Topics}
-\section{Weak (Anti-)Localization Effects}\label{sec:wl}
-\input{tex_background/sec_wl.tex}
+
+\chapter{Theoretical Topics}\label{ch:theory}
+\begin{refsection} 
+    \section{Weak (Anti-)Localization Effects}\label{sec:wl}
+    \input{tex_background/sec_wl.tex}
+    \printbibliography[heading=subbibintoc, title=References for Appendix~\ref{ch:theory}]
+\end{refsection}
 %
 \chapter{Summary of Acronyms, Symbols and Chemical Formulae}
     \input{ap_symbols.tex}
 %
-\printbibliography
+%\printbibliography
 \end{document}
