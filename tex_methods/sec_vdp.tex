@@ -48,4 +48,7 @@ The sheet resistance $R_\Box$ may be obtained by combining two resistance measur
     R_{12,34} &= \frac{V_{34}}{I_{12}}\nonumber\\
     R_{13,24} &= \frac{V_{24}}{I_{13}}~,
 \end{align}%
-where the subscripts on $V$ and $I$ denote the electrodes to measure between. Irrespective of the shape of the sample, the 
+where the subscripts on $V$ and $I$ denote the electrodes to measure between. Irrespective of the shape of the sample, the sheet resistance can be calculated by solving numerically%
+\begin{equation}\label{eq:vdp_full}
+	e^{-\frac{-\pi{}R_{12,34}}{R_\Box}} + e^{-\frac{-\pi{}R_{13,24}}{R_\Box}} = 1
+\end{equation}
