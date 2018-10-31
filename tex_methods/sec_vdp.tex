@@ -30,7 +30,7 @@ the variation of 3D resistivity is circumvented by using the 2D resistivity, or 
 The sheet resistance and the Hall effect can be measured in a thin film with either the Hall bar configuration (fig.~\ref{fig:transport_meas}a) or the van der Pauw method (fig.~\ref{fig:transport_meas}b).%
 \begin{figure}[ht]%
 	\centering%
-    \includegraphics[width=0.8\columnwidth]{figs_misc/transport_meas}%
+    \includegraphics[width=1.0\columnwidth]{figs_misc/transport_meas}%
     \caption[Hall bar and van der Pauw configuration]{\label{fig:transport_meas}(a)~A simple variant of the Hall bar configuration, and (b)~a van der Pauw configuration. The blue shape denote the samples, whereas the numbered or labeled orange area denotes metallic Ohmic contacts.}%
 \end{figure}%
 
@@ -40,15 +40,33 @@ The van der Pauw method, on the other hand, does not require precise geometry. S
 \begin{enumerate}[label={\alph*)}]
     \item The contacts are much smaller than the sample.
     \item The contacts all intersect with the circumference of the sample.
-    \item The sample has uniform 2D resistivity everywhere.
-    \item The sample is singly connected, namely does not have isolated holes.
+    \item The sample has uniform 2D resistivity everywhere.\label{it:vdp3}
+    \item The sample is singly connected, namely does not have isolated holes.\label{it:vdp4}
 \end{enumerate}%
-The sheet resistance $R_\Box$ may be obtained by combining two resistance measurements: %
+\textit{N.b.,} assumptions~c~\&~d are shared with the Hall bar configuration, whereas a~\&~b are unique for the van der Pauw method. The sheet resistance $R_\Box$ may be obtained by combining two four-terminal resistance measurements: %
 \begin{align}
     R_{12,34} &= \frac{V_{34}}{I_{12}}\nonumber\\
     R_{13,24} &= \frac{V_{24}}{I_{13}}~,
 \end{align}%
 where the subscripts on $V$ and $I$ denote the electrodes to measure between. Irrespective of the shape of the sample, the sheet resistance can be calculated by solving numerically%
 \begin{equation}\label{eq:vdp_full}
-	e^{-\frac{-\pi{}R_{12,34}}{R_\Box}} + e^{-\frac{-\pi{}R_{13,24}}{R_\Box}} = 1
+	e^{-\frac{\pi{}R_{12,34}}{R_\Box}} + e^{-\frac{\pi{}R_{13,24}}{R_\Box}} = 1~,
 \end{equation}
+whereas the Hall effect can be measured by
+\begin{equation}\label{eq:vdp_hall}
+	R_{xy} = \frac{V_{23}}{I_{14}} = \frac{V_{41}}{I_{23}}~.
+\end{equation}
+
+The samples presented in later chapters are typically patterned with a shadow mask into a square shape (fig.~\ref{fig:vdp_square}). %
+\begin{figure}[ht]%
+	\centering%
+    \includegraphics[width=0.35\columnwidth]{figs_misc/vdp_square}%
+    \caption[A typical square van der Pauw pattern]{\label{fig:vdp_square}A typical square van der Pauw pattern used for measuring samples presented in later chapters.}%
+\end{figure}%
+In such case, if the square is perfect in geometry, the two four-terminal resistance in eqn.~\ref{eq:vdp_full} are symmetric: $R_{12,34} = R_{13,24}$. Eqn.~\ref{eq:vdp_full} therefore reduces to%
+\begin{equation}\label{eq:vdp_square}
+	{R_\Box} = \frac{\pi}{\ln{2}}R_{12,34}~.
+\end{equation}%
+In practice, however, the geometry of the square patterns might not be perfect: \textit{e.g.}, due to misalignment of the contacts, or finite tilting of the shadow masks. In general, we measured $R_{12,34}$ and $R_{13,24}$ for each sample at the room temperature. If the difference is small ($<10\%$), only one four-terminal resistance is measured, and the sheet resistance calculated by eqn.~\ref{eq:vdp_square}; otherwise, typically both configurations of four-terminal resistance were measured, and eqn.~\ref{eq:vdp_full} was used to calculate the sheet resistance.
+
+Comparing the sample geometry to 
