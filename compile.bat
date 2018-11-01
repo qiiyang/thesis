@@ -1,10 +1,3 @@
 pdflatex thesis
-bibtex thesis1-blx
-bibtex thesis2-blx
-bibtex thesis3-blx
-bibtex thesis4-blx
-bibtex thesis5-blx
-bibtex thesis6-blx
-bibtex thesis
-pdflatex thesis
+biber thesis
 pdflatex thesis

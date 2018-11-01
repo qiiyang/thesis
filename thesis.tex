@@ -1,13 +1,14 @@
 \documentclass{report}
 
 \usepackage[online]{suthesis-2e}
+%\usepackage[utf8]{inputenc}
 
 % For Bibliography
 \usepackage[american]{babel}
 \usepackage{csquotes}
 \usepackage[style=phys, citestyle=phys,%
     articletitle=false, biblabel=brackets, chaptertitle=false, pageranges=false, %APS style
-    backend=bibtex8, bibencoding=ascii, doi=false, url=false, eprint=false]{biblatex}
+    backend=biber, bibencoding=ascii, doi=false, url=false, eprint=false]{biblatex}
 \addbibresource{bibs/bib_ours.bib}
 \addbibresource{bibs/bib_wl.bib}
 \addbibresource{bibs/bib_general.bib}
@@ -48,7 +49,7 @@
 \usepackage{tabularx}	% for tables
 \setlength{\extrarowheight}{2pt}	% row padding
 
-\usepackage{CJK}
+%\usepackage{CJK}
 
 
 \hyphenation{QAHE TI}
@@ -65,7 +66,7 @@
 \thirdreader{Xiaoliang Qi}
 
 \beforepreface
-\input{tex_misc/ch_dedication.tex}
+%\input{tex_misc/ch_dedication.tex}
 
 \prefacesection{Abstract}
     Abstract 
@@ -126,7 +127,6 @@
 \end{refsection}
 %
 \chapter{Summary of Acronyms, Symbols and Chemical Formulae}
-    \input{ap_symbols.tex}
-%
-%\printbibliography
+    \input{tex_misc/ap_symbols.tex}
+
 \end{document}
