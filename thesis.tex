@@ -3,10 +3,14 @@
 \usepackage[online]{suthesis-2e}
 \usepackage[utf8]{inputenc}
 
+\usepackage{epigraph}
+\setlength{\epigraphrule}{0pt}
+
 % For Bibliography
 \usepackage[american]{babel}
 \usepackage{csquotes}
-\usepackage[style=phys, citestyle=phys,%
+\usepackage[%
+    style=phys, citestyle=phys,%
     articletitle=false, biblabel=brackets, chaptertitle=false, pageranges=false, %APS style
     backend=biber, bibencoding=ascii, doi=false, url=false, eprint=false]{biblatex}
 \addbibresource{bibs/bib_ours.bib}
@@ -81,6 +85,7 @@
     ...
 	
 \chapter{Experimental Methods}\label{ch:methods}
+\epigraph{``Measure what is measurable, and make measurable what is not so.''}{Galileo Galilei}
 \begin{refsection}   
     \section{Thin Film Growth: Pulsed Laser Deposition}\label{sec:pld}
 		\input{tex_methods/sec_pld.tex}
