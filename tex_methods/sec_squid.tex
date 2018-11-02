@@ -2,18 +2,26 @@ A Josephson's junction is two pieces of superconductors separated by a thin barr
 \begin{figure}[ht]%
 	\centering%
     \includegraphics[width=0.55\columnwidth]{figs_misc/josephson}%
-    \caption[Josephson's junction]{\label{fig:josephson}Schematic illustration of a Josephson's junction.}%
+    \caption[Josephson's junction]{\label{fig:josephson}(Color online) Schematic illustration of a Josephson's junction. Two pieces of superconductors are separated by a thin barrier that is either an insulator or a normal conductor. When the barrier is sufficiently thin, the supercurrent tunnels through the barrier.}%
 \end{figure}%
 %
-When the barrier is sufficiently thin, the supercurrent tunnels through the barrier, thereby the junction exhibits a constant current without applied voltage. This is referred to as the Josephson effect. The voltage across the junction, $V$, the current tunneling through the barrier, $I$, are related to the the difference between the phases of the Ginzburg-Landau order parameters on the two sides of the barrier $\Delta\theta$~\cite{Josephson1962, Josephson1974}:%
+When the barrier is sufficiently thin, the supercurrent tunnels through the barrier, thereby the junction can sustain a constant current without applied voltage. This is referred to as the Josephson effect. The voltage across the junction, $V$, the current tunneling through the barrier, $I$, are related to the the difference between the phases of the Ginzburg-Landau order parameters on the two sides of the barrier $\Delta\theta$~\cite{Josephson1962, Josephson1974}:%
 \begin{align}
     V(t) &= \frac{\hbar}{2e}\frac{\diff \Delta\theta(t)}{\diff t}~,\\
-    I(t) &= I_c\sin\left(\Delta\theta(0) + \frac{2eV}{\hbar}t\right)~.
-\end{align}
+    I(t) &= I_c\sin\left(\Delta\theta(0) + \frac{2eV}{\hbar}t\right)~.\label{eq:Josephson_I}
+\end{align}%
+The current constant $T_c$ is referred to as the critical current, namely the maximal current can pass through the junction without an applied voltage.
 
 A Superconducting QUantum Interference Device (SQUID) is two Josephson's junctions connected by a superconductor in parallel (figure~\ref{fig:squid}). %
 \begin{figure}[ht]%
 	\centering%
     \includegraphics[width=0.65\columnwidth]{figs_misc/squid}%
-    \caption[Superconducting quantum interference device]{\label{fig:squid}Schematic illustration of a superconducting quantum interference device (SQUID).}%
+    \caption[Superconducting quantum interference device]{\label{fig:squid}(Color online) Schematic illustration of a superconducting quantum interference device (SQUID). An ideal SQUID functions as a Fraunhoffer interferometer measuring the external flux through the loop.}%
 \end{figure}%
+%
+In an ideal SQUID, the geometry is perfectly symmetrical, therefore the critical currents of the two junctions the same, and the barriers do not introduce any dissipation. An external magnetic flux $\Phi$ through the SQUID loop introduces a difference between the phase differences of the two junctions~\cite{Annett}:%
+\begin{align}
+    \Delta\theta_1 - \Delta\theta_2 &= \frac{2e}{\hbar}\Phi\nonumber\\
+        &= 2\pi\frac{\Phi}{\Phi_0}~,\label{eq:SQUID}
+\end{align}%
+where $\Phi_0 = \frac{h}{2e}$ is the magnetic flux quantum. Equations~\ref{eq:Josephson_I}~\&~\ref{eq:SQUID} together illustrate that the combined supercurrent $I$ as a function of the external magnetic flux $\Phi$ is a Fraunhoffer interference pattern formed by the superposition of the supercurrents through both junctions.
