@@ -84,7 +84,14 @@
 \captionsetup{width=0.95\columnwidth}%
 \chapter{Introduction}\label{ch:intro}
     ...
-	
+
+\chapter{Theoretical Topics}\label{ch:theory}
+\begin{refsection} 
+\epigraph{``\textit{Fere libenter, homines id quod volunt credunt.}''}{Julius Caesar}
+    \section{Weak (Anti-)Localization Effects}\label{sec:wl}
+    \input{tex_background/sec_wl.tex}
+    \printbibliography[heading=subbibintoc, title=References for Chpter~\ref{ch:theory}]
+\end{refsection}	
 \chapter{Experimental Methods}\label{ch:methods}%
 \begin{refsection}   
 \epigraph{``A writer who says that there are no truths, or that all truth is `merely relative', is asking you not to believe him. So don't.''}{Sir Roger Scruton}
@@ -131,13 +138,6 @@
      ...
 \appendix
 %
-
-\chapter{Theoretical Topics}\label{ch:theory}
-\begin{refsection} 
-    \section{Weak (Anti-)Localization Effects}\label{sec:wl}
-    \input{tex_background/sec_wl.tex}
-    \printbibliography[heading=subbibintoc, title=References for Appendix~\ref{ch:theory}]
-\end{refsection}
 %
 \chapter{Summary of Acronyms, Symbols and Chemical Formulae}
     \input{tex_misc/ap_symbols.tex}
