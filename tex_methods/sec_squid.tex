@@ -28,9 +28,22 @@ where $\Phi_0 = \frac{h}{2e}$ is the magnetic flux quantum. Equations~\ref{eq:Jo
 \begin{equation}
     I(t) = i_1(t) + i_2(t) = 2i_c\cos\left(\frac{\pi\Phi}{\Phi_0}\right)\sin\left(\Delta\bar{\theta}(t)\right)~.
 \end{equation}%
-The critical current, namely the maximal supercurrent through the SQUID, is therefore an oscillating function of $\Phi$ with a period of $\Phi_0$:%
+The critical current, namely the maximal supercurrent through the SQUID, is therefore an oscillating function of $\Phi$ with a period of $\Phi_0$ (figure~\ref{fig:squid_ic}):%
 \begin{equation}
     I_{c}(t) = 2i_c\left|\cos\left(\frac{\pi\Phi}{\Phi_0}\right)\right|~.
-\end{equation}
+\end{equation}%
+\begin{figure}[ht]%
+	\centering%
+    \includegraphics[width=0.8\columnwidth]{figs_methods/squid_ic}%
+    \caption[SQUID critical current as a function of magnetic flux]{\label{fig:squid_ic}The critical current of an ideal SQUID as a function of external magnetic flux.}%
+\end{figure}%
+%
+When moving a magnetic dipole through a SQUID loop, the change in the magnetic flux introduced by the dipole can therefore be measured by measuring the critical current $I_c$, and counting the periods of the oscillation. The diple moment can hence calculated from the change in magnetic flux and the geometry of the SQUID.
+
+The SQUIDs used for magnetometry in practice have several important differences from an ideal one. Firstly, a practical SQUID has finite size, and is typically fabricated with a thin film typy-II superconductor. Therefore a screening current up to $\Phi_0 / 2L$ is induced by the magnetic flux through the loop, and oscillates as a function of the flux with a periodicity of $\Phi_0$. The screening current introduces an asymmetry between the two junctions. Consequently, the minima in the critical current exhibits non-zero values~\cite{Clarke1976}.
+
+In practice, a SQUID has finite area, therefore a finite self-inductance $L$ and non-negligible screening current. Typically a thin film type-II superconductor is used for fabricating SQUID, hence the screening current is limited to $\Phi_0 / 2L$ and with a periodicity of $\Phi_0$ as function of the magnetic flux. Such circulating current introduces an asymmetry between the two junction of the SQUID loop
+
+In practice, due to the zero resistance in its superconducting state, it is more convenient to apply a current bias through a SQUID rather than a voltage bias.
 
 In practice, a Josephson's junction may have finite shunt resistance $R$ and capacitance $C$, depending on the dimensionless parameter $\beta_c = 2\pi{}R^2i_cC$, it consequently may or may not exhibits hysteresis in its current-voltage characteristics~\cite{Hansma1971}. Typically, a SQUID used for magnetometry measurements is constructed with non-hysteric junctions, with $\beta_c \lesssim 1$. A constant bias current $I > I_{c}$ is applied, 
