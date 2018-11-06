@@ -1,1 +1,28 @@
-Magnetic susceptibility 
+The magnetization $\vec{M}$ of a material and a constant applied magnetic field strength $\vec{H}$ are connected through its DC magnetic susceptibility:
+\begin{equation}%
+    \vec{M} = \chi\vec{H}~.%
+\end{equation}%
+%
+In general, since $\vec{M}$ may have different direction from $\vec{H}$, $\chi$ is a tensor. Within the scope of this thesis, however, only the component of $\vec{M}$ that is parallel to $\vec{H}$ is measured, therefore $\vec{H}$, $\vec{M}$, and $\chi$ are effectively all treated as scalars:
+\begin{equation}%
+    M = \chi{}H~.%
+\end{equation}%
+%
+The DC magnetic susceptibility of a sample, therefore, can simply be calculated by the measured magnetic moment (e.g., with a SQUID magnetometer) and the applied magnetic field strength.
+
+When the applied magnetic field strength contains a constant component $\overline{H}$ and a sinusoidal component $\widetilde{H}(t)$, the magnetization generally also displays an oscillating component in response: $M(t) = \overline{M} + \widetilde{M}(t)$. Similarly to the DC magnetic susceptibility, the oscillating components of the the magnetization and of the applied field strength are in turn related by the AC magnetic susceptibility $\chi_{AC}$:
+\begin{equation}%
+    \widetilde{M}(t) = \chi_{AC}\widetilde{H}(t)~.%
+\end{equation}%
+
+When the oscillating field $\widetilde{H}(t)$ has a small amplitude and a low frequency, the AC susceptibility takes real values and measures the local derivative of $\overline{M}$ with respect to $\overline{H}$:%
+\begin{equation}%
+    \lim\limits_{f \to 0}\chi_{AC} = \frac{\diff\overline{M}}{\diff\overline{H}}~.%
+\end{equation}%
+%
+On the other hand, at higher frequencies, the dynamic properties of the sample plays an important role, and the magnetization may respond to the applied field in a partially out-of-sync manner. In such case, the AC susceptibility takes a complex form:%
+\begin{equation}%
+    \chi_{AC} = \chi' + i\chi''~,%
+\end{equation}%
+where $\chi'$ and $\chi''$ take real values. These are often referred to as the dynamic magnetic susceptibility.
+
