@@ -40,10 +40,19 @@ The critical current, namely the maximal supercurrent through the SQUID, is ther
 %
 When moving a magnetic dipole through a SQUID loop, the change in the magnetic flux introduced by the dipole can therefore be measured by measuring the critical current $I_c$, and counting the periods of the oscillation. The diple moment can hence calculated from the change in magnetic flux and the geometry of the SQUID.
 
-The SQUIDs used for magnetometry in practice have several important differences from an ideal one. Firstly, a practical SQUID has finite size, and is typically fabricated with a thin film typy-II superconductor. Therefore a screening current up to $\Phi_0 / 2L$ is induced by the magnetic flux through the loop, and oscillates as a function of the flux with a periodicity of $\Phi_0$. The screening current introduces an asymmetry between the two junctions. Consequently, the minima in the critical current exhibits non-zero values~\cite{Clarke1976}.
+The SQUIDs used for magnetometry in practice have several important differences from an ideal one. Firstly, a practical SQUID has finite size, and is typically fabricated with a thin film typy-II superconductor. Therefore a screening current up to $\Phi_0 / 2L$ is induced by the magnetic flux through the loop, and oscillates as a function of the flux with a periodicity of $\Phi_0$. The screening current introduces an asymmetry between the two junctions. Consequently, the minima in the critical current exhibits non-zero values~\cite{Clarke1976}. Secondly, due to its zero resistance in the superconducting state, it is inconvenient to apply a constant voltage across a SQUID. Instead, a constant bias current $I_0 > I_c$ is applied through the SQUID, and the oscillations in the critical current is measured indirectly by measuring the oscillations in the voltage due to the current-voltage relation changing with $I_c$ (figure~\ref{fig:squid_iv}). %
+\begin{figure}[ht]%
+	\centering%
+    \includegraphics[width=0.8\columnwidth]{figs_methods/squid_iv}%
+    \caption[Current-Voltage relation in a typical SQUID magnetometer]{\label{fig:squid_iv}Current-Voltage relation in a typical SQUID magnetometer changes as the critical current varies. At a constant bias current $I_0$, as the magnetic flux changes monotonously, the voltage oscillates as the current-voltage relation changes back and forth.}%
+\end{figure}%
+In such current r\'egime, for each Josephson's junction, the normal resistance in the barrier serve as finite resistance $R$ in parallel of the junction, whereas the superconductors on both sides of the junctions introduce a finite shunt capacitance $C$. The resistance of the junction barrier was designed such that dimensionless parameter $\beta_c = 2\pi{}R^2i_cC \lesssim 1$, which results in a non-hysteric current-voltage characteristics~\cite{Hansma1971}.
 
-In practice, a SQUID has finite area, therefore a finite self-inductance $L$ and non-negligible screening current. Typically a thin film type-II superconductor is used for fabricating SQUID, hence the screening current is limited to $\Phi_0 / 2L$ and with a periodicity of $\Phi_0$ as function of the magnetic flux. Such circulating current introduces an asymmetry between the two junction of the SQUID loop
+The SQUID magnetometers used to measure samples discussed in this thesis are commercial MPMS systems from Quantum Design. To allow measurements in external magnetic fields, a set of four SQUID coils are combined to measure the second derivative of magnetic flux as a function of longitudinal position~\cite{mpms_hardware}. A sample is fixed mechanically in a drinking straw that is in turn mechanically attached to a driven rod. As the sample moves up and down through the SQUID loops, the signals from the SQUID coils are automatically recorded as functions of position of the sample.
 
-In practice, due to the zero resistance in its superconducting state, it is more convenient to apply a current bias through a SQUID rather than a voltage bias.
-
-In practice, a Josephson's junction may have finite shunt resistance $R$ and capacitance $C$, depending on the dimensionless parameter $\beta_c = 2\pi{}R^2i_cC$, it consequently may or may not exhibits hysteresis in its current-voltage characteristics~\cite{Hansma1971}. Typically, a SQUID used for magnetometry measurements is constructed with non-hysteric junctions, with $\beta_c \lesssim 1$. A constant bias current $I > I_{c}$ is applied, 
+The raw data collected from the SQUID coils are fitted to predefined models to obtain the magnetic moments of the sample~\cite{mpms_software}.
+\begin{figure}[ht]%
+	\centering%
+    \includegraphics[width=0.8\columnwidth]{figs_methods/lastscan}%
+    \caption[An example of SQUID signals.]{\label{fig:lastscan}An example of SQUID signals produced by a ferromagnetic sample. The crosses are measured voltages; whereas the solid line is fitted model.}%
+\end{figure}% 
