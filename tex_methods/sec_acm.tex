@@ -10,14 +10,14 @@ In general, since $\vec{M}$ may have different direction from $\vec{H}$, $\chi$ 
 %
 The DC magnetic susceptibility of a sample, therefore, can simply be calculated by the measured magnetic moment (e.g., with a SQUID magnetometer) and the applied magnetic field strength.
 
-When the applied magnetic field strength contains a constant component $\overline{H}$ and a sinusoidal component $\widetilde{H}(t)$, the magnetization generally also displays an oscillating component in response: $M(t) = \overline{M} + \widetilde{M}(t)$. Similarly to the DC magnetic susceptibility, the oscillating components of the the magnetization and of the applied field strength are in turn related by the AC magnetic susceptibility $\chi_{AC}$:
+When the applied magnetic field strength contains a constant component $\overline{H}$ and a sinusoidal component $\widetilde{H}(t)=\left|\widetilde{H}\right|e^{i\omega{}t}$, the magnetization generally also displays an oscillating component in response: $M(t) = \overline{M} + \widetilde{M}(t)$. Similarly to the DC magnetic susceptibility, the oscillating components of the the magnetization and of the applied field strength are in turn related by the AC magnetic susceptibility $\chi_{AC}$:
 \begin{equation}%
     \widetilde{M}(t) = \chi_{AC}\widetilde{H}(t)~.%
 \end{equation}%
 
 When the oscillating field $\widetilde{H}(t)$ has a small amplitude and a low frequency, the AC susceptibility takes real values and measures the local derivative of $\overline{M}$ with respect to $\overline{H}$:%
 \begin{equation}%
-    \lim\limits_{f \to 0}\chi_{AC} = \frac{\diff\overline{M}}{\diff\overline{H}}~.%
+    \lim\limits_{\omega \to 0}\chi_{AC} = \frac{\diff\overline{M}}{\diff\overline{H}}~.%
 \end{equation}%
 %
 On the other hand, at higher frequencies, the dynamic properties of the sample plays an important role, and the magnetization may respond to the applied field in a partially out-of-sync manner. In such case, the AC susceptibility takes a complex form:%
@@ -26,10 +26,20 @@ On the other hand, at higher frequencies, the dynamic properties of the sample p
 \end{equation}%
 where $\chi'$ and $\chi''$ take real values. These are often referred to as the dynamic magnetic susceptibility.
 
+Consider the work done to the local magnetization by the applied external magnetic field, the complex power per unit volume is%
+\begin{align}%
+    \widetilde{P} &= \frac{1}{2}\mu_0 \widetilde{H}^* \frac{\diff \widetilde{M}}{\diff t}\nonumber\\
+        &= \frac{1}{2}\mu_0\chi_{AC}\widetilde{H}^*\frac{\diff \widetilde{H}}{\diff t}\nonumber\\
+        &= \frac{1}{2}i\omega\mu_0\chi_{AC}\left|\widetilde{H}\right|^2\nonumber\\
+        &= \frac{1}{2}\omega\mu_0\left|\widetilde{H}\right|^2(-\chi''+i\chi')\label{eq:acm_power}~.
+\end{align}%
+The real part of $\widetilde{P}$, corresponding to dissipation, is determined by $\chi''$; whereas the imaginary part of $\widetilde{P}$, corresponding to the reflection of electromagnetic waves, is detwemined by $\chi'$.
+
+
 A home-made mutual inductance device (figure~\ref{fig:mi_sketch}) was used to measure the AC susceptibility in thin film samples.\footnote{The mutual inductance device was fabricated by Alan Fang.} %
 \begin{figure}[ht]%
 	\centering%
     \includegraphics[width=0.65\columnwidth]{figs_misc/mi}%
-    \caption[Mutual inductance coils for AC susceptibility measurements.]{\label{fig:mi_sketch}Mutual inductance coils for AC susceptibility measurements.}%
+    \caption[Schematic illustration of the mutual inductance coil set for AC susceptibility measurements]{\label{fig:mi_sketch}Schematic illustration of the mutual inductance coil set for AC susceptibility measurements.}%
 \end{figure}%
 %
