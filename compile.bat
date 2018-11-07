@@ -13,3 +13,4 @@ del *Notes.bib
 pdflatex thesis
 biber thesis
 pdflatex thesis
+pdflatex thesis
