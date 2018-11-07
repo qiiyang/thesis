@@ -48,7 +48,7 @@ if __name__ == '__main__':
     xs[0] = 0.0
     ys[0] = 0.0
     xs[1] = 0.0
-    sub.plot(xs, ys, marker=None, linestyle='-', color="#2671b2")
+    sub.plot(xs, ys, marker=None, linestyle='-', color="#2671b2", zorder=10)
     
     I0 = 0.35
     ys = np.arange(I0-dx, x1, dx)
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     xs[0] = 0.0
     ys[0] = 0.0
     xs[1] = 0.0
-    sub.plot(xs, ys, marker=None, linestyle='-', color="#f19101")
+    sub.plot(xs, ys, marker=None, linestyle='-', color="#f19101", zorder=11)
     
     #sub.axhline(y=0.5, linestyle='-', color="k")
     
