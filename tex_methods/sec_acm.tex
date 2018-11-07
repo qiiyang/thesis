@@ -26,7 +26,7 @@ On the other hand, at higher frequencies, the dynamic properties of the sample p
 \end{equation}%
 where $\chi'$ and $\chi''$ take real values. These are often referred to as the dynamic magnetic susceptibility.
 
-Consider the work done to the local magnetization by the applied external magnetic field, the complex power per unit volume is%
+Consider the work done to the local magnetization by the applied external magnetic field, the instantaneous power being $P = \mu_0H\frac{\diff M}{\diff t}$, the complex power per unit volume is therefore%
 \begin{align}%
     \widetilde{P} &= \frac{1}{2}\mu_0 \widetilde{H}^* \frac{\diff \widetilde{M}}{\diff t}\nonumber\\
         &= \frac{1}{2}\mu_0\chi_{AC}\widetilde{H}^*\frac{\diff \widetilde{H}}{\diff t}\nonumber\\
@@ -35,11 +35,21 @@ Consider the work done to the local magnetization by the applied external magnet
 \end{align}%
 The real part of $\widetilde{P}$, corresponding to dissipation, is determined by $\chi''$; whereas the imaginary part of $\widetilde{P}$, corresponding to the reflection of electromagnetic waves, is detwemined by $\chi'$.
 
+Measurements of AC magnetic susceptibility have been proven to be very sensitive to thermodynamic transitions as well as surface and local phenomena. Such utility has been demonstrated in a variety of material systems, including 2D ferromagnetism, spin-glass, superparamagnetism, heavy fermions, and superconductivity~\cite{ac_nitroxide, ac_spin_glass, ac_superpara, Ando1994, Gegenwart2005, Schemm2014}.
 
-A home-made mutual inductance device (figure~\ref{fig:mi_sketch}) was used to measure the AC susceptibility in thin film samples.\footnote{The mutual inductance device was fabricated by Alan Fang.} %
+A home-made mutual inductance device (figure~\ref{fig:mi_sketch}) based on refs.~~\cite{Jeanneret1989,Yazdani1993} was used to measure the AC susceptibility in thin film samples.\footnote{The mutual inductance device was fabricated by Alan Fang.} %
 \begin{figure}[ht]%
 	\centering%
     \includegraphics[width=0.65\columnwidth]{figs_misc/mi}%
-    \caption[Schematic illustration of the mutual inductance coil set for AC susceptibility measurements]{\label{fig:mi_sketch}Schematic illustration of the mutual inductance coil set for AC susceptibility measurements.}%
+    \caption[Schematic illustration of the mutual inductance device for AC susceptibility measurements]{\label{fig:mi_sketch}Schematic illustration of the mutual inductance device for AC susceptibility measurements. An AC current is applied through the drive coil, resulting in an AC applied magnetic field. The pickup coil is wound in a gradiometer configuration, therefore insensitive to the applied field. Since the magnetization in the sample produces an inhomogeneous AC magnetic flux outside the sample, which induces an electromotive force in the pickup coil.}%
 \end{figure}%
 %
+A solenoidal $\sim$\SI{1.5}{mm} in diameter is used as the drive coil. A pickup coil is wound in a gradiometer configuration and placed concentric inside the drive coil. Both coils are wound with copper wires, which exhibit negligible electric resistance at low temperatures. To provide mechanical integrity, Stycast 2850-FT epoxy was applied on the coils and molded into a cylinder.
+
+An AC current in on the drive coil to produce the AC applied magnetic field. Since the magnetic field is homogeneous within the drive coil, it does not generate a signal in the pickup coil. The magnetization in the sample, on the other hand, produces an inhomogeneous AC magnetic flux outside the sample, therefore induces an electromotive force in the pickup coil.
+
+The applied magnetic field strength at the end of the drive coil is proportional to the AC current in the drive coil:%
+\begin{equation}%
+    \widetilde{H} = \frac{1}{2}N\widetilde{I}~,
+\end{equation}%
+where $N$ is the number of turns per unit length.
