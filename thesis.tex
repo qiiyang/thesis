@@ -14,7 +14,7 @@
     articletitle=false, biblabel=brackets, chaptertitle=false, pageranges=false, %APS style
     backend=biber, bibencoding=ascii, doi=false, url=false, eprint=false]{biblatex}
 \addbibresource{bibs/bib_ours.bib}
-\addbibresource{bibs/bib_wl.bib}
+\addbibresource{bibs/bib_conduction.bib}
 \addbibresource{bibs/bib_general.bib}
 \addbibresource{bibs/bib_EuS.bib}
 \addbibresource{bibs/bib_TI.bib}
@@ -92,9 +92,13 @@
 \chapter{Theoretical Topics}\label{ch:theory}
 \begin{refsection} 
 \epigraph{``\textit{Fere libenter, homines id quod volunt credunt.}''}{Gaius Julius Caesar (100--44~BC)}
+    \section{Drude Model of Electric Conduction in Two Dimensions}
+        \input{tex_thoeries/sec_drude.tex}
     \section{Weak (Anti-)Localization Effects}\label{sec:wl}
-    \input{tex_thoeries/sec_wl.tex}
-    \printbibliography[heading=subbibintoc, title=References for Chpter~\ref{ch:theory}]
+        \input{tex_thoeries/sec_wl.tex}
+    \section{Variable-Range Hopping Conduction}\label{sec:vrh}
+        \input{tex_thoeries/sec_vrh.tex}
+    \printbibliography[heading=subbibintoc, title=References for Chapter~\ref{ch:theory}]
 \end{refsection}	
 
 
