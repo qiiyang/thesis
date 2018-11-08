@@ -1,15 +1,19 @@
-The electric conduction in a conductor is described quasi-classically by the Drude model, which treats electrons moving among scattering centers as charged pinballs being scattered around infinitesimal pins~\cite{drude1900}:%
+At finite temperatures, electric conduction in a conductor is characterized by scattering of electrons. This is sometimes referred to as ``diffusive electron transport''. The scattering of electrons in an electric field can be described classically by the Drude model, which treats electrons moving among scattering centers as non-interacting charged pinballs being scattered around infinitesimal pins~\cite{drude1900a}:%
 \begin{align}%
-    \sigma &= \left|\frac{\vec{J}}{\vec{E}}\right| = \frac{ne^2\tau}{m}\nonumber\\
+    \sigma &= \left|\frac{\vec{J}}{\vec{E}}\right| = \frac{ne^2\tau}{m}\\
         &= \frac{ne^2l}{p}~,\label{eq:drude}
 \end{align}%
-where $n$ is the electron density, $e$ the elementary charge, $\tau$ the mean free time, $m$ the effective mass of the electron, $l$ the mean free path, and $p$ the mean magnitude of the electron momentum.
+where $n$ is the electron density, $e$ the elementary charge, $\tau$ the mean free time, $m$ the effective mass of the electron, $l$ the mean free path, and $p$ the mean magnitude of the electron momentum. Although the Drude model is purely classical, the result in equation \ref{eq:drude} remains valid even when Fermi-Dirac statistics is taken into account, namely in the free electron (Drude-Sommerfeld) model~\cite{sommerfeld1928}.
 
-In a two dimensional conductor where the Fermi level intersects with the conduction band at a wave vector $k = k_F$ (figure~\ref{fig:band_conductor}a), %
+The Drude model can be related to the band structure in two dimensions by considering an n-type conductor, where the Fermi level intersects with the conduction band at a wave vector $k = k_F$ (figure~\ref{fig:band_conductor}a). %
 \begin{figure}[ht]%
     \centering%
     \includegraphics[width=0.5\columnwidth]{figs_misc/band_conductor}%
     \caption[Band structure of an n-type conductor]{\label{fig:band_conductor}A conductor where the Fermi level intersects with the conduction band.}%
 \end{figure}%
 %
-the mean magnitude of the electron momentum is $p = \hbar k_F$. Assuming the band structure is isotropic, the area of the Fermi surface is $A_F = \pi k_F^2$.
+The mean magnitude of the electron momentum is $p = \hbar k_F$. Assuming the band structure is isotropic, the area of the Fermi surface is $A_F = \pi k_F^2$. The density of states in $k$-space per unit area in the real space is%
+\begin{align}
+    g(\vec{k}) &= \frac{\diff^4N}{\diff^2 \vec{k} \diff^2 \vec{x}}\nonumber\\
+        & = \frac{1}{(2\pi)^2}~,
+\end{align}%
