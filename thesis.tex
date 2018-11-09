@@ -19,6 +19,8 @@
 \addbibresource{bibs/bib_EuS.bib}
 \addbibresource{bibs/bib_TI.bib}
 \addbibresource{bibs/bib_bilayer.bib}
+%\DeclareFieldFormat{labelnumber}{\mkbibsecnum{#1}}
+%\newrobustcmd{\mkbibsecnum}[1]{\thechapter.#1\relax}
 
 
 \usepackage{bm}        % for math
@@ -36,18 +38,17 @@
 
 % for hyperlinks
 \usepackage{xcolor}
-\definecolor{linkAccentColor}{HTML}{0696bb} % Bauhaus Itten cyan
-\usepackage[colorlinks=false, breaklinks=true, bookmarks=true, linktocpage=true]{hyperref}
-\hypersetup{%
-  colorlinks=false,% hyperlinks will be coloured
-  linkcolor=black,% hyperlink text will be {}
-  linkbordercolor=linkAccentColor,% hyperlink border will be {}
-  urlbordercolor=linkAccentColor,% hyperlink border will be {}
-  citebordercolor=linkAccentColor,% hyperlink border will be {}
-  pdfborderstyle={/S/U/W 1}% Overrides border style set with colorlinks=true
-                          % Hyperlink border style will be underline of width 1pt
-}
-
+%\definecolor{linkAccentColor}{HTML}{0696bb} % Bauhaus Itten cyan
+%\usepackage[colorlinks=false, breaklinks=true, bookmarks=true, linktocpage=true]{hyperref}
+%\hypersetup{%
+%  colorlinks=false,% hyperlinks will be coloured
+%  linkcolor=black,% hyperlink text will be {}
+%  linkbordercolor=linkAccentColor,% hyperlink border will be {}
+%  urlbordercolor=linkAccentColor,% hyperlink border will be {}
+%  citebordercolor=linkAccentColor,% hyperlink border will be {}
+%  pdfborderstyle={/S/U/W 1}% Overrides border style set with colorlinks=true
+%                          % Hyperlink border style will be underline of width 1pt
+%}
 
 \usepackage[perpage, symbol*]{footmisc}	% for footnote symbols
 \usepackage{enumitem}
