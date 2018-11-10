@@ -18,16 +18,20 @@ In a semiconductor with dopants, the Fermi level is closely related to the ioniz
 \end{equation}%
 where $\varepsilon_1$ is close to $E_{ion}$ (ref.~\cite{schklovskii_efros}, equation 4.1.4).
 
-When $k_B T \ll E_{ion} < E_g$, neither of intrinsic carriers or the extrinsic carriers are excited. Electric conduction in this r\'egime is by electrons jumping from occupied dopant sites to unoccupied ones due to weak overlapping between the wave functions of electrons on nearby dopant sites. This is known as hopping conduction (figure~\ref{fig:hopping}).%
+When $k_B T \ll E_{ion} < E_g$, neither of intrinsic carriers or the extrinsic carriers are excited. Electrons are therefore localized at the dopant sites. Electric conduction in this r\'egime is by electrons jumping from occupied sites to unoccupied ones due to weak overlapping between the wave functions of electrons on nearby sites. This is known as hopping conduction (figure~\ref{fig:hopping}).%
 \begin{figure}[ht]%
     \centering%
     \includegraphics[width=0.8\columnwidth]{figs_misc/hopping}%
-    \caption[Illustration of hopping conduction]{\label{fig:hopping}Illustration of hopping conduction. In an electric field $\vec{E}$, electrons may jump from occupied dopant sites to unoccupied ones due to weak overlapping between the wave functions of electrons on neighboring dopant sites.}%
+    \caption[Illustration of hopping conduction]{\label{fig:hopping}Illustration of hopping conduction. In an electric field $\vec{E}$, electrons may jump from occupied dopant sites to unoccupied ones due to weak overlapping between the wave functions of electrons on neighboring sites.}%
 \end{figure}%
 
-%
+In semiconductors with disordered dopants, at the low-temperature end, the most relevant hopping mechanism is the variable-range hopping. In such mechanism, the hopping probability between an occupied state and an unoccupied state is limited by both the difference between the energies, and the spatial separation. Depending on the role of Coulomb interaction, variable-range hopping can be either the Mott type (without a Coulomb gap) or the Efros-Shklovskii type (with a Coulomb gap).
+
+In a disordered semiconductor, the localized states introduced by the dopants are randomly distributed both in space, and as a function of energy near the Fermi level (figure~\ref{fig:mott}). %
 \begin{figure}[ht]%
     \centering%
-    \includegraphics[width=0.95\columnwidth]{figs_theories/mott}%
-    \caption[Energy structure of Mott's Law]{\label{fig:mott}Energy structure of Mott's Law.}%
+    \includegraphics[width=0.85\columnwidth]{figs_theories/mott}%
+    \caption[Simulated disordered localized states]{\label{fig:mott}Simulated disordered localized states. The circles and crosses denote empty and filled states, respectively. The localized states are randomly distributed in space and in energy. An increase in the bandwidth $\pm\varepsilon_0$ around the Fermi level increases the average energy difference $\Delta E$ between empty and filled states within the band, while reducing the average distance $\Delta r$.}%
 \end{figure}%
+%
+Consider an energy band near the Fermi level within $E_F \pm \varepsilon_0$: the average energy difference between an occupied state and an unoccupied state within such band is therefore $\Delta E \approx \varepsilon_0$. The total number of states within a fixed volume ($N$) is proportional to the bandwidth ($\varepsilon_0$), and is related to the average distance ($\Delta r$) between the states by the number of dimensions ($d$): $n = (\Delta r)^{-d} \propto \varepsilon_0$.
