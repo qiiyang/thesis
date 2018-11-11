@@ -1,4 +1,4 @@
-Electron transport in semiconductors in the low-conductivity r\'egime are discussed in detail by \citeauthor{schklovskii_efros} in ref.~\cite{schklovskii_efros}; whereas here the most relevant results are outlined.
+Electron transport in semiconductors in the low-conductivity r\'egime are discussed in detail by \citeauthor{schklovskii_efros} in ref.~\cite{schklovskii_efros}; whereas here the most relevant results are outlined. In this chapter, for brevity, the charge carriers are assumed to be electrons, whereas the principles outlined also apply to hole conduction.
 
 In a semiconductor, namely a band insulator with a small band gap $E_g$, without any dopant, the Fermi level is at the middle of the gap (figure~\ref{fig:band_semiconductor}a). %
 \begin{figure}[ht]%
@@ -55,3 +55,9 @@ where the constant $T_0$ absorbs $a$ and $b$. The temperature dependence of the 
     \sigma = \sigma_1 e^{-\left(\frac{T}{T_0}\right)^{-\frac{1}{d+1}}}~.\label{eq:vrh_mott}%
 \end{equation}%
 Equation~\ref{eq:vrh_mott} is referred to as Mott's Law~\cite{schklovskii_efros, mott1968}.
+
+Compared to the Mott type variable-range hopping, the Efros-Shklovskii type occurs when long-range Coulomb interaction plays a significant role. In absence of a strong screening effect of mobile charges, the Coulomb interaction is long range. In such case, the energy cost associated with moving an electron from a filled localized state to an empty one is determined not only by the energy difference between the two states, but also by the global charge distribution. An energy gap therefore exists at the Fermi level between the occupied and the unoccupied states~\cite{pollak1970}. The temperature dependence of conductivity is shown to be%
+\begin{equation}%
+    \sigma = \sigma_1 e^{-\left(\frac{T}{T_0}\right)^{-\frac{1}{2}}}~,\label{eq:vrh_efros}%
+\end{equation}%
+independent of the number of dimensions~\cite{schklovskii_efros, efros1975}.
