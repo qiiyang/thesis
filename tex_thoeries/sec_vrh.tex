@@ -25,13 +25,33 @@ When $k_B T \ll E_{ion} < E_g$, neither of intrinsic carriers or the extrinsic c
     \caption[Illustration of hopping conduction]{\label{fig:hopping}Illustration of hopping conduction. In an electric field $\vec{E}$, electrons may jump from occupied dopant sites to unoccupied ones due to weak overlapping between the wave functions of electrons on neighboring sites.}%
 \end{figure}%
 
-In semiconductors with disordered dopants, at the low-temperature end, the most relevant hopping mechanism is the variable-range hopping. In such mechanism, the hopping probability between an occupied state and an unoccupied state is limited by both the difference between the energies, and the spatial separation. Depending on the role of Coulomb interaction, variable-range hopping can be either the Mott type (without a Coulomb gap) or the Efros-Shklovskii type (with a Coulomb gap).
+In semiconductors with disordered dopants, at the low-temperature end, the most relevant hopping mechanism is the variable-range hopping. In such mechanism, the hopping probability between an occupied state and an unoccupied state is limited by both the difference between the energies, and the spatial separation. Depending on the role of Coulomb interaction, variable-range hopping can be either the Mott type (without a Coulomb gap) or the Efros-Shklovskii type (with a Coulomb gap), that predict different temperature dependence of conductivity for a $d$-dimensional system:%
+\begin{equation}
+    \sigma(T) = %
+    \begin{cases}
+        \sigma_1 e^{-\left(\frac{T}{T_0}\right)^{-\frac{1}{d+1}}}       & \quad \text{(Mott type)}\\
+        \sigma_1 e^{-\left(\frac{T}{T_0}\right)^{-\frac{1}{2}}}  & \quad \text{(Efros-Shklovskii type)}~,
+    \end{cases}\label{eq:vrh_types}
+\end{equation}%
+where $\sigma_1$ and $T_0$ are unknown constants.
 
-In a disordered semiconductor, the localized states introduced by the dopants are randomly distributed both in space, and as a function of energy near the Fermi level (figure~\ref{fig:mott}). %
+For the Mott type, consider a disordered semiconductor: the localized states introduced by the dopants are randomly distributed both in space, and as a function of energy near the Fermi level (figure~\ref{fig:mott}). %
 \begin{figure}[ht]%
     \centering%
     \includegraphics[width=0.85\columnwidth]{figs_theories/mott}%
-    \caption[Simulated disordered localized states]{\label{fig:mott}Simulated disordered localized states. The circles and crosses denote empty and filled states, respectively. The localized states are randomly distributed in space and in energy. An increase in the bandwidth $\pm\varepsilon_0$ around the Fermi level increases the average energy difference $\Delta E$ between empty and filled states within the band, while reducing the average distance $\Delta r$.}%
+    \caption[Simulated disordered localized states]{\label{fig:mott}Simulated disordered localized states in a one-dimensional slice. The circles and crosses denote empty and filled states, respectively. The localized states are randomly distributed in space and in energy. An increase in the bandwidth $\pm\varepsilon_0$ around the Fermi level increases the average energy difference $\Delta E$ between empty and filled states within the band, while reducing the average distance $\Delta r$.}%
 \end{figure}%
 %
-Consider an energy band near the Fermi level within $E_F \pm \varepsilon_0$: the average energy difference between an occupied state and an unoccupied state within such band is therefore $\Delta E \approx \varepsilon_0$. The total number of states within a fixed volume ($N$) is proportional to the bandwidth ($\varepsilon_0$), and is related to the average distance ($\Delta r$) between the states by the number of dimensions ($d$): $n = (\Delta r)^{-d} \propto \varepsilon_0$.
+Consider an energy band near the Fermi level within $E_F \pm \varepsilon_0$: the average energy difference between an occupied state and an unoccupied state within such band is therefore $\Delta E \approx \varepsilon_0$. The total number of states within a fixed volume ($N$) is proportional to the bandwidth ($\varepsilon_0$), and is related to the average distance ($\Delta r$) between the states by the number of dimensions ($d$): $N = (\Delta r)^{-d} \propto \varepsilon_0$ $\implies \Delta r \propto \varepsilon_0^{-1/d}$. The probability of hopping, hence the conductivity, falls exponentially with the distance between the localized sites: $\sigma \propto e^{-a\varepsilon_0^{-1/d}}$. Combine this with the Boltzmann factor:%
+\begin{equation}%
+    \sigma = \sigma_1 \cdot e^{-a\varepsilon_0^{-1/d}} \cdot e^{-\frac{b\varepsilon_0}{k_B T}}~,\label{eq:vrh_parts}%
+\end{equation}%
+where $\sigma_1$, $a$, and $b$ an unknown constants. Varying $\varepsilon_0$ to minimize equation~\ref{eq:vrh_parts}:%
+\begin{equation}%
+    \varepsilon_0 = \left(\frac{T}{T_0}\right)^{\frac{d}{d+1}}~,%
+\end{equation}%
+where the constant $T_0$ absorbs $a$ and $b$. The temperature dependence of the conductivity is therefore%
+\begin{equation}%
+    \sigma = \sigma_1 e^{-\left(\frac{T}{T_0}\right)^{-\frac{1}{d+1}}}~.\label{eq:vrh_mott}%
+\end{equation}%
+Equation~\ref{eq:vrh_mott} is referred to as Mott's Law~\cite{schklovskii_efros, mott1968}.
