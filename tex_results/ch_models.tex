@@ -1,1 +1,33 @@
-In chapter~\ref{ch:bilayer2018} we presented evidence suggesting that the prerequisites for the weak (anti-)localization models are not satisfied in TI-ferromagnet bilayers that show negative magnetoresistance (figure~\ref{fig:bilayer2018_wl_trend}).
+Given the spin-momentum locking in the surface states, the electric conduction in topological insulator thin films is typically discussed in literature in terms of the weak anti-localization effect, which are applicable for low sheet resistance ($R_\Box \ll h/e^2$, see section~\ref{sec:wl}). While the weak anti-localization explains well the positive magnetoresistance that is ubiquitously observed in topological insulator thin films, two discrepancies have been observed at low temperatures. Firstly, while the weak anti-localization effect should increase the conductivity as the temperature is lowered~\cite{bergmann1984}, often a reduction of conductivity is observed, with the conductivity proportional to the logarithm of temperature~\cite{Chen2011, Liu2011, Roy2013}, similar to that described by the opposite, weak localization, effect (equation~\ref{eq:wl_T}).
+
+In chapter~\ref{ch:bilayer2018}, high resistance ($R_\Box \gtrsim h/e^2$) was observed as the commonality amongst TI-ferromagnet thin film bilayers that show negative magnetoresistance (figure~\ref{fig:bilayer2018_wl_trend}). After the publication of \cite{bilayer2018}, we were brought to attention to ref.~\cite{liao2015}, in which \citeauthor{liao2015} analysed the temperature dependence of resistance of (Bi$_x$Sb$_{1-x}$)$_2$Te$_3$ thin films, demonstrating that by reducing the thicknesses of thin films, electric conduction undergoes a crossover from the weak-localization (WL) r\'egime to the variable-range hopping (VRH) r\'egime. These suggest that the temperature dependence of resistance should be analyzed for the thin film samples presented so far in this thesis.
+
+Both topological insulator materials presented in this thesis should be considered doped semiconductors. In the case of Bi$_2$Se$_3$, perfect crystalline samples were predicted to have a Fermi level in the bulk band gap~\cite{TI_electronic_structure_zhang}; whereas as-made thin film samples in practice typically exhibit elevated Fermi levels that intersect with the bulk conduction band, primarily due to doping effects from interstitials and vacancies~\cite{TI_ARPES1, ARPES_thickness, zhangli2013, Zhanybek3, Fisher2010}. In the case of (Bi$_x$Sb$_{1-x}$)$_2$Te$_3$, on the other hand, the difference between the ionization energy of Bi$^{3+}$ and that of Sb$^{3+}$ is utilized to move the Fermi level into the bulk band gap, typically with Bi$^{3+}$ serving as substitutional dopants~\cite{ZhangJS2011, TI_electronic_structure_zhang}.
+
+The electric conduction modes in doped semiconductors discussed in ref~\cite{schklovskii_efros} and section~\ref{sec:vrh}, therefore, are relevant to the thin film samples in this thesis. These modes include thermally activation of dopant charges into the conduction or valence band, and Mott type and Efros-Shklovskii type variable-range hopping (VRH). Together with the weak localization (WL) effect in the diffusive conduction mode, these constitute the four conduction modes to be compared in this chapter. The temperature dependence of sheet conductivity resulted from these conduction modes in two-dimensions are discussed in sections~\ref{sec:wl} \& \ref{sec:vrh}, and summarized below in equations~\ref{eq:modes}:%
+\begin{equation}\label{eq:modes}
+    \sigma_\Box(T) \propto %
+    \begin{cases}
+        \log(T / T_0)  & \quad \text{(WL, equation~\ref{eq:wl_T})}\\
+        e^{-\frac{\varepsilon_1}{k_B T}}   & \quad \text{(thermal activation, equation~\ref{eq:activation})}\\
+        e^{-\left(\frac{T}{T_0}\right)^{-\frac{1}{3}}}   & \quad \text{(Mott type VRH, equation~\ref{eq:vrh_mott})}\\
+        e^{-\left(\frac{T}{T_0}\right)^{-\frac{1}{2}}} & \quad \text{(Efros-Shklovskii type VRH, equation~\ref{eq:vrh_efros})}~.
+    \end{cases}
+\end{equation}%
+
+To test how well each of these conduction modes describes the temperature dependence of the thin film samples presented in earlier chapters, the equations~\ref{eq:modes} are linearized, the 
+
+\begin{table}[ht]
+    \centering
+    \begin{tabularx}{0.75\columnwidth}[t]{l|l|l|X}
+    \caption[Linearized formulae for comparison of conduction modes]{Linearized formulae for comparison of conduction modes.}\\
+		\hline\hline
+        Conduction mode & $x$-Axes & $y$-Axes & Shorthands\\
+        \hline%
+        weak localization & $\log(T)$ & $\sigma_\Box$ & WL\\
+        thermal activation & $T^{-1}$ & $\log\left(R_\Box\right)$ & TA\\
+        Mott type VRH & $T^{-1/3}$ & $\log\left(R_\Box\right)$ & M-VRH\\
+        Efros-Shklovskii type VRH & $T^{-1/2}$ & $\log\left(R_\Box\right)$ & ES-VRH\\
+		\hline\hline
+    \end{tabularx}
+\end{table}
