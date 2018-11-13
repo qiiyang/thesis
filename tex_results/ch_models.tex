@@ -4,7 +4,7 @@ In chapter~\ref{ch:bilayer2018}, such high resistance ($R_\Box \gtrsim h/e^2$) w
 
 Both topological insulator materials presented in this thesis should be considered doped semiconductors. In the case of Bi$_2$Se$_3$, perfect crystalline samples were predicted to have a Fermi level in the bulk band gap~\cite{TI_electronic_structure_zhang}; whereas as-made thin film samples in practice typically exhibit elevated Fermi levels that intersect with the bulk conduction band, primarily due to interstitials and vacancies~\cite{TI_ARPES1, ARPES_thickness, zhangli2013, Zhanybek3, Fisher2010}. In the case of (Bi$_x$Sb$_{1-x}$)$_2$Te$_3$, on the other hand, the difference between the ionization energy of Bi$^{3+}$ and that of Sb$^{3+}$ is utilized to move the Fermi level into the bulk band gap, typically with Bi$^{3+}$ serving as substitutional dopants~\cite{ZhangJS2011, TI_electronic_structure_zhang}.
 
-The electric conduction modes in doped semiconductors discussed in ref~\cite{schklovskii_efros} and section~\ref{sec:vrh}, therefore, are relevant to the thin film samples in this thesis. These modes include thermally activation of dopant charges into the conduction or valence band, and both Mott type and Efros-Shklovskii type variable-range hopping (VRH). Together with the diffusive conduction with electron-electron interaction (EE), these constitute the four conduction modes to be tested in this chapter. The temperature dependence of sheet conductivity resulted from these conduction modes in two-dimensions are discussed in sections~\ref{sec:wl} \& \ref{sec:vrh}, and summarized below in equations~\ref{eq:modes}:%
+The electric conduction modes in doped semiconductors discussed in ref~\cite{schklovskii_efros} and section~\ref{sec:vrh}, therefore, are relevant to the thin film samples in this thesis. Here we will test four conduction models against the temperature dependence of resistance of our samples: the diffusive conduction with electron-electron interaction (EE) as demonstrated in refs.~\cite{Chen2011, Liu2011, Roy2013, liao2015}, both Mott type and Efros-Shklovskii type variable-range hopping (VRH), as well a thermal activation model that might describe the crossover between the variable-range hopping and fully diffusive r\'egimes (equation~\ref{eq:activation}, and ref.~\cite{schklovskii_efros}: chapter 4). The temperature dependence of sheet conductivity resulted from these models in two-dimensions are discussed in sections~\ref{sec:wl} \& \ref{sec:vrh}, and summarized below in equations~\ref{eq:modes}:%
 \begin{equation}\label{eq:modes}
     \sigma_\Box(T) \propto %
     \begin{cases}
@@ -15,12 +15,11 @@ The electric conduction modes in doped semiconductors discussed in ref~\cite{sch
     \end{cases}
 \end{equation}%
 
-To test how well each of these conduction modes describes the temperature dependence of the thin film samples presented in earlier chapters, the equations~\ref{eq:modes} are linearized, the 
-
+To test how well each of these models describes the temperature dependence of the thin film samples presented in earlier chapters, the equations~\ref{eq:modes} are linearized into the form $y=ax+b$ (table~\ref{tab:models}), %
 \begin{table}[ht]
     \centering
     \begin{tabularx}{0.95\columnwidth}[t]{l|l|l|X}
-    \caption[Linearized formulae for comparison of conduction modes]{Linearized formulae for comparison of conduction modes.}\\
+    \caption[Linearized formulae for conduction modes]{\label{tab:models}Linearized formulae for conduction models. The shorthands will be used to annotate figures.}\\
 		\hline\hline
         Conduction mode & $x$-Axes & $y$-Axes & Shorthands\\
         \hline%
@@ -30,4 +29,7 @@ To test how well each of these conduction modes describes the temperature depend
         Efros-Shklovskii type variable-range hopping & $T^{-1/2}$ & $\log\left(R_\Box\right)$ & ES-VRH\\
 		\hline\hline
     \end{tabularx}
-\end{table}
+\end{table}%
+%
+and the linearity of the data plots according to each of the models will be compared.
+
