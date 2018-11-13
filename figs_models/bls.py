@@ -39,7 +39,7 @@ if __name__ == '__main__':
     mi_columns = {0:"H", 1:"mr", 3:"err"}
     
     # Figure configs
-    plt.rc('font', family='serif')
+    #plt.rc('font', family='serif')
     plt.rc('font', size=12)
     plt.rc('ps', usedistiller="xpdf")
     
@@ -223,6 +223,6 @@ if __name__ == '__main__':
     legend = sub_b.legend(handlelength=1.0, handletextpad=0.5, ncol=1, loc='upper left', bbox_to_anchor=(1.15, 1.15))
     fig.set_tight_layout(tight)
     
+    #fig.savefig(r'bls_out.pdf', format='pdf')
+    #fig.savefig(r'bls_out.svg', format='svg')
     fig.savefig(r'bls.pdf', format='pdf')
-    #fig.savefig(r'bls.eps', format='eps')
-    
