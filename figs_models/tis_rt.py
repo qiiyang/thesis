@@ -28,7 +28,7 @@ tight = {"pad": 0.3, "h_pad": 0.0, "w_pad": 0.0}
 
 if __name__ == '__main__':    
     # Figure configs
-    #plt.rc('font', family='serif')
+    plt.rc('font', family='serif')
     plt.rc('font', size=12)
     plt.rc('ps', usedistiller="xpdf")
     

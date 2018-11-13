@@ -39,7 +39,7 @@ if __name__ == '__main__':
     mi_columns = {0:"H", 1:"mr", 3:"err"}
     
     # Figure configs
-    #plt.rc('font', family='serif')
+    plt.rc('font', family='serif')
     plt.rc('font', size=12)
     plt.rc('ps', usedistiller="xpdf")
     
