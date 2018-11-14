@@ -39,7 +39,9 @@
 % for hyperlinks
 \usepackage{xcolor}
 %\definecolor{linkAccentColor}{HTML}{0696bb} % Bauhaus Itten cyan
-%\usepackage[colorlinks=false, breaklinks=true, bookmarks=true, linktocpage=true]{hyperref}
+\definecolor{linkAccentColor}{HTML}{2e3092} % PRL blue
+%\usepackage[colorlinks=true, breaklinks=true, bookmarks=false, linkcolor=linkAccentColor, urlcolor=linkAccentColor, citecolor=linkAccentColor]{hyperref}
+\usepackage[colorlinks=true, breaklinks=true, bookmarks=false, linkcolor=black, urlcolor=linkAccentColor, citecolor=linkAccentColor]{hyperref}
 %\hypersetup{%
 %  colorlinks=false,% hyperlinks will be coloured
 %  linkcolor=black,% hyperlink text will be {}
@@ -154,7 +156,7 @@
 \appendix
 %
 %
-\chapter{Summary of Acronyms, Symbols and Chemical Formulae}
+\chapter{Acronyms, Symbols and Chemical Formulae}
     \input{tex_misc/ap_symbols.tex}
 
 \end{document}
