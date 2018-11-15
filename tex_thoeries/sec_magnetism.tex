@@ -1,4 +1,4 @@
-Spontaneous magnetism is an ordered state formed by magnetic moments in a material in absence of an external magnetic field. It is among the first quantum phenomena utilized by mankind~\cite{mag_history}. Spontaneous magnetism can be formed either by the spins of localized electrons, or by that of itinerant electrons~\cite{moriya1984}. For the scope of this thesis, we will focus on the former case.
+A spontaneous magnetic order is an ordered state formed by magnetic moments in a material in absence of an external magnetic field. It is among the first quantum phenomena utilized by mankind~\cite{mag_history}. Spontaneous magnetism can be formed either by the spins of localized electrons, or by that of itinerant electrons~\cite{moriya1984}. For the scope of this thesis, we will focus on the former case.
 
 Electronic orbitals have two-fold degeneracy due to the spin degree of freedom. Therefore a full subshell has zero total spin. A partially filled subshell, on the other hand, exhibits a net spin due to the Hund's rule of maximal multiplicity.
 
@@ -15,10 +15,16 @@ When the coupling constant, $J$, is positive, the ground state resulted from equ
     \caption[Illustrations of ferromagnetism, antiferromagnetism, and ferrimagnetism]{\label{fig:bg_mag}Illustrations of (a)~ferromagnetism, (b)~simple antiferromagnetism, and (c)~ferrimagnetism.}%
 \end{figure}%
 %
-At sufficiently high temperatures, such spontaneous magnetization disappears, and the material becomes paramagnetic. The behavior of magnetic susceptibility $\chi$, relating the magnetization $M$ and the applied field strength $H$, in such paramagnetic r\'egime is described by the Curie-Weiss law:%
+At sufficiently high temperatures, such spontaneous magnetic order disappears, and the material becomes paramagnetic. The behavior of magnetic susceptibility $\chi$, relating the magnetization $M$ and the applied field strength $H$, in such paramagnetic r\'egime is described by the Curie-Weiss law:%
 \begin{equation}%
     \chi = \frac{M}{H} = \frac{C}{T - T_C}~,\label{eq:curie_weiss}%
 \end{equation}%
 where $C$ is the Curie constant. The Curie temperature, $T_C$, is the temperature dividing the ferromagnetic and the paramagnetic r\'egimes.
 
-When $J$ is negative, and all the spins are equal in size, the spins of two nearest neighbors are opposite to each other in the ground state. In such case, no net spontaneous magnetization is obtained. This is referred to as antiferromagnetism (figure~\ref{fig:bg_mag}b). When $J$ is negative, and nearest neighbors 
+When $J$ is negative, and all the spins are equal in size, the spins of two nearest neighbors are opposite to each other in the ground state. In such case, no net spontaneous magnetization is obtained. This is referred to as antiferromagnetism (figure~\ref{fig:bg_mag}b). Similarly to ferromagnetism, antiferromagnetic order disappears above a temperature $T_N$ (the N\'eel temperature). Above $T_N$ the material become paramagnetic, and the magnetic susceptibility is similarly described by the Curie-Weiss law:%
+\begin{equation}%
+    \chi = \frac{M}{H} = \frac{C}{T - \Theta}~,%
+\end{equation}%
+where $\Theta$ is a negative constant.
+
+When $J$ is negative, and nearest neighbors consist of unequal spins, the spins are opposite to each other in the ground state, similarly to antiferromagnetism. However, the opposing spins form unequal magnetic moments, therefore a finite spontaneous magnetization remains. This is referred to as ferrimagnetism (figure~\ref{fig:bg_mag}c).
