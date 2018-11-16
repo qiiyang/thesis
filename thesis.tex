@@ -26,9 +26,10 @@
 \usepackage{bm}        % for math
 \usepackage{amssymb}   % for math
 \usepackage{amsmath}   % for math
-\usepackage{gensymb}	% for text symbols
+\usepackage{physics}
+
 \newcommand*\diff{\mathop{}\!\mathrm{d}}    % d for derivative
-\renewcommand{\vec}[1]{\mathbf{#1}} % bold vectors
+\renewcommand{\vec}[1]{\vectorbold*{#1}} % bold vectors
 
 \usepackage{graphicx}  % needed for figures
 \usepackage{siunitx}    % for degree Celcius etc
@@ -38,19 +39,8 @@
 
 % for hyperlinks
 \usepackage{xcolor}
-%\definecolor{linkAccentColor}{HTML}{0696bb} % Bauhaus Itten cyan
 \definecolor{linkAccentColor}{HTML}{2e3092} % PRL blue
-%\usepackage[colorlinks=true, breaklinks=true, bookmarks=false, linkcolor=linkAccentColor, urlcolor=linkAccentColor, citecolor=linkAccentColor]{hyperref}
 \usepackage[colorlinks=true, breaklinks=true, bookmarks=false, linkcolor=black, urlcolor=linkAccentColor, citecolor=linkAccentColor]{hyperref}
-%\hypersetup{%
-%  colorlinks=false,% hyperlinks will be coloured
-%  linkcolor=black,% hyperlink text will be {}
-%  linkbordercolor=linkAccentColor,% hyperlink border will be {}
-%  urlbordercolor=linkAccentColor,% hyperlink border will be {}
-%  citebordercolor=linkAccentColor,% hyperlink border will be {}
-%  pdfborderstyle={/S/U/W 1}% Overrides border style set with colorlinks=true
-%                          % Hyperlink border style will be underline of width 1pt
-%}
 
 \usepackage[perpage, symbol*]{footmisc}	% for footnote symbols
 \usepackage{enumitem}
