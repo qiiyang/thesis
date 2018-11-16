@@ -1,6 +1,6 @@
 ﻿A Dirac cone is an electronic dispersion relation that takes form of a conical surface near its apex. The apex of such conical surface is called the Dirac point. A Dirac cone represents two energy bands that are separated everywhere else, but have equal energy at the Dirac point.
 
-Dirac points are often unstable in nature. Such tendency is illustrated by the von Neumann--Wigner problem~\cite{vonNeumann1993, Asano2011}. Consider an isolated Dirac cone, with the Dirac point at a wave vector $\vec{k}=\vec{k_0}$. The two bands forming the Dirac cone therefore form an eigenbasis of the Hamiltonian. Labeling the two bands 1 \& 2, the Hamiltonian is therefore%
+Dirac points are often unstable in nature. Such tendency is illustrated by the von Neumann--Wigner problem~\cite{vonNeumann1993, Asano2011}. Consider an isolated Dirac cone, with the Dirac point at a wave vector $\vec{k}=\vec{k_0}$. In absence of any perturbation, the two bands forming the Dirac cone therefore form an eigenbasis of the electronic Hamiltonian. Labeling the two bands 1 \& 2, the Hamiltonian is therefore%
 \begin{equation}
     \op{H_0}(\vec{k}) = %
         \begin{pmatrix}
@@ -20,13 +20,21 @@ The eigenvalues of the perturbed Hamiltonian are
 \begin{equation}
     E_\pm(\vec{k}) = \frac{1}{2} \qty(E_1(\vec{k}) + E_2(\vec{k})) \pm \frac{1}{2} \sqrt{\qty(E_1(\vec{k}) - E_2(\vec{k}))^2 + \abs{w(\vec{k})}^2}~.
 \end{equation}
-Therefore, albeit the two bands are otherwise degenerate at the Dirac point, $E_1(\vec{k_0}) = E_2(\vec{k_0})$, any scattering between the bands may open a gap $\Delta{}E = \abs{w(\vec{k_0})}$ at the Dirac point.
+Therefore, albeit the two bands are otherwise degenerate at the Dirac point, $E_1(\vec{k_0}) = E_2(\vec{k_0})$, any scattering between the bands may open a gap $\Delta{}E = \abs{w(\vec{k_0})}$.
 
-Certain symmetries may protect the degeneracy at the Dirac point, and prevent a gap from opening. A three-dimensional topological insulator (3D TI) is an example of such case. A 3D TI is a band insulator in its bulk, and possesses a surface state with spin-polarized Dirac dispersion (figure~\ref{fig:bg_ti}).%
+Certain symmetries may protect the degeneracy at the Dirac point, and prevent a gap from opening. A three-dimensional topological insulator (3D TI) is an example of such case. A 3D TI is a band insulator in its bulk, and possesses a surface state with odd numbers of spin-polarized Dirac cones (figure~\ref{fig:bg_ti}).%
 \begin{figure}[ht]%
     \centering%
     \includegraphics[width=0.55\columnwidth]{figs_theories/band_ti}%
     \caption[Band structure of a 3D topological insulator]{\label{fig:bg_ti}A one-dimensional slice of the band structure of a three-dimensional topological insulator, modeled after Bi$_2$Se$_3$~\cite{TI_Qi}. The $x$--$y$ plane is defined by the local surface of the material while looking from the outside. The arrows denote the directions of the spin on the surface state, measured on the $y$-direction. The surface state has a spin-polarized Dirac dispersion, and connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within a Brillouin zone.}%
 \end{figure}%
 
-In the example given in figure~\ref{fig:bg_ti}, the Dirac point situates at the $\Gamma$ point: $\vec{k} = 0$.
+In the example given in figure~\ref{fig:bg_ti}, a single Dirac cone exists, with the Dirac point at the $\Gamma$ point: $\vec{k} = 0$. In absence of any time-reversal symmetry (TRS) breaking scattering, the electronic Hamiltonian is invariant under time-reversal:%
+\begin{equation}%
+    t \to -t: \quad \op{H}(\vec{k}, \uparrow) = \op{H}(\vec{-k}, \downarrow)~.\label{eq:trs}%
+\end{equation}%
+At $\vec{k}=0$, this implies%
+\begin{equation}%
+    \op{H}(0, \uparrow) = \op{H}(0, \downarrow)~.%
+\end{equation}%
+At the Brillouin zone boundary, $\vec{k} = \vec{B}$
