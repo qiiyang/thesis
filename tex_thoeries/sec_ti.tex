@@ -22,19 +22,25 @@ The eigenvalues of the perturbed Hamiltonian are
 \end{equation}
 Therefore, albeit the two bands are otherwise degenerate at the Dirac point, $E_1(\vec{k_0}) = E_2(\vec{k_0})$, any scattering between the bands may open a gap $\Delta{}E = \abs{w(\vec{k_0})}$.
 
-Certain symmetries may protect the degeneracy at the Dirac point, and prevent a gap from opening. A three-dimensional topological insulator (3D TI) is an example of such case. A 3D TI is a band insulator in its bulk, and possesses a surface state with odd numbers of spin-polarized Dirac cones (figure~\ref{fig:bg_ti}).%
+Certain symmetries may protect the degeneracy at the Dirac point, and prevent a gap from opening. A three-dimensional topological insulator (3D TI) is an example of such case. A 3D TI is a band insulator in its bulk, and possesses a surface state with an odd number of spin-polarized Dirac cones (figure~\ref{fig:bg_ti}).%
 \begin{figure}[ht]%
     \centering%
     \includegraphics[width=0.55\columnwidth]{figs_theories/band_ti}%
-    \caption[Band structure of a 3D topological insulator]{\label{fig:bg_ti}A one-dimensional slice of the band structure of a three-dimensional topological insulator, modeled after Bi$_2$Se$_3$~\cite{TI_Qi}. The $x$--$y$ plane is defined by the local surface of the material while looking from the outside. The arrows denote the directions of the spin on the surface state, measured on the $y$-direction. The surface state has a spin-polarized Dirac dispersion, and connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within a Brillouin zone.}%
+    \caption[Band structure of a 3D topological insulator]{\label{fig:bg_ti}A one-dimensional slice of the band structure of a three-dimensional topological insulator, modeled after Bi$_2$Se$_3$~\cite{TI_Qi}. The $x$--$y$ plane is defined by the local surface of the material while looking from the outside. The arrows denote the directions of the spin on the surface state, measured on the $y$-direction. The surface state has a spin-polarized Dirac dispersion, and connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within the Brillouin zone.}%
 \end{figure}%
 
-In the example given in figure~\ref{fig:bg_ti}, a single Dirac cone exists, with the Dirac point at the $\Gamma$ point: $\vec{k} = 0$. In absence of any time-reversal symmetry (TRS) breaking scattering, the electronic Hamiltonian is invariant under time-reversal:%
+In absence of any time-reversal symmetry (TRS) breaking scattering, the electronic Hamiltonian is invariant under time-reversal:%
 \begin{equation}%
     t \to -t: \quad \op{H}(\vec{k}, \uparrow) = \op{H}(\vec{-k}, \downarrow)~.\label{eq:trs}%
 \end{equation}%
-At $\vec{k}=0$, this implies%
+At the $\Gamma$ point, $\vec{k}=0$, this implies%
 \begin{equation}%
-    \op{H}(0, \uparrow) = \op{H}(0, \downarrow)~.%
+    \op{H}(0, \uparrow) = \op{H}(0, \downarrow)~.\label{eq:Kramer_0}%
 \end{equation}%
-At the Brillouin zone boundary, $\vec{k} = \vec{B}$
+At the Brillouin zone boundary, $\vec{k} = \vec{B}$, since by definition $\vec{B} = -\vec{B}$, equation~\ref{eq:trs} implies%
+\begin{equation}%
+    \op{H}(\vec{B}, \uparrow) = \op{H}(\vec{B}, \downarrow)~.\label{eq:Kramer_b}%
+\end{equation}%
+Equations \ref{eq:Kramer_0} \& \ref{eq:Kramer_b} together state that, at time-reversal invariant locations in the momentum-space, the electronic Hamiltonian has at least two-fold degeneracy due to the spin degree of freedom. This is known as the Kramers' theorem.
+
+In the example given in figure~\ref{fig:bg_ti}, the surface state is formed by a single spin-polarized Dirac cone, with the Dirac point at the $\Gamma$ point. The Dirac point has only two-fold degeneracy, therefore is protected against any non TRS-breaking scattering by the Kramers' theorem. The surface state connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within the Brillouin zone. Thus at the zone boundary, the Kramers' theorem is satisfied by the combination of the surface states on the opposite sides of the material, which have opposite spins.
