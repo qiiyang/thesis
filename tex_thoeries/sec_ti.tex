@@ -2,7 +2,7 @@
 
 Dirac points are often unstable in nature. Such tendency is illustrated by the von Neumann--Wigner problem~\cite{vonNeumann1993, Asano2011}. Consider an isolated Dirac cone, with the Dirac point at a wave vector $\vec{k}=\vec{k_0}$. In absence of any perturbation, the two bands forming the Dirac cone therefore form an eigenbasis of the electronic Hamiltonian. Labeling the two bands 1 \& 2, the Hamiltonian is therefore%
 \begin{equation}
-    \op{H_0}(\vec{k}) = %
+    \op{H}_0(\vec{k}) = %
         \begin{pmatrix}
             E_1(\vec{k}) & 0\\
             0 & E_2(\vec{k})
@@ -22,12 +22,14 @@ The eigenvalues of the perturbed Hamiltonian are
 \end{equation}
 Therefore, albeit the two bands are otherwise degenerate at the Dirac point, $E_1(\vec{k_0}) = E_2(\vec{k_0})$, any scattering between the bands may open a gap $\Delta{}E = \abs{w(\vec{k_0})}$.
 
-Certain symmetries may protect the degeneracy at the Dirac point, and prevent a gap from opening. A three-dimensional topological insulator (3D TI) is an example of such case. A 3D TI is a band insulator in its bulk, and possesses a surface state with an odd number of spin-polarized Dirac cones (figure~\ref{fig:bg_ti}).%
+Certain symmetries may protect the degeneracy at the Dirac point, and prevent a gap from opening. A three-dimensional topological insulator (3D TI) is an example of such case~\cite{TI_Qi, TI_Col}. A 3D TI (in its strong sense) is a band insulator in its bulk, and possesses a surface state with an odd number of spin-polarized Dirac cones (figure~\ref{fig:bg_ti}). %
 \begin{figure}[ht]%
     \centering%
     \includegraphics[width=0.55\columnwidth]{figs_theories/band_ti}%
-    \caption[Band structure of a 3D topological insulator]{\label{fig:bg_ti}A one-dimensional slice of the band structure of a three-dimensional topological insulator, modeled after Bi$_2$Se$_3$~\cite{TI_Qi}. The $x$--$y$ plane is defined by the local surface of the material while looking from the outside. The arrows denote the directions of the spin on the surface state, measured on the $y$-direction. The surface state has a spin-polarized Dirac dispersion, and connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within the Brillouin zone.}%
+    \caption[Band structure of a 3D topological insulator]{\label{fig:bg_ti}A one-dimensional slice of the band structure of a three-dimensional topological insulator, modeled after Bi$_2$Se$_3$~\cite{TI_electronic_structure_zhang}. The $x$--$y$ plane is defined by the local surface of the material while looking from the outside. The arrows denote the directions of the spin on the surface state, measured on the $y$-direction. The surface state has a spin-polarized Dirac dispersion, and connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within the Brillouin zone.}%
 \end{figure}%
+%
+It was shown that a 3D TI is obtained, in a crystal with inversion symmetry, by inversion of bands of opposite parities due to spin-orbit coupling at all time-reversal invariant high symmetry points in the momentum space~\cite{Fu2007}.
 
 In absence of any time-reversal symmetry (TRS) breaking scattering, the electronic Hamiltonian is invariant under time-reversal:%
 \begin{equation}%
@@ -43,4 +45,19 @@ At the Brillouin zone boundary, $\vec{k} = \vec{B}$, since by definition $\vec{B
 \end{equation}%
 Equations \ref{eq:Kramer_0} \& \ref{eq:Kramer_b} together state that, at time-reversal invariant locations in the momentum-space, the electronic Hamiltonian has at least two-fold degeneracy due to the spin degree of freedom. This is known as the Kramers' theorem.
 
-In the example given in figure~\ref{fig:bg_ti}, the surface state is formed by a single spin-polarized Dirac cone, with the Dirac point at the $\Gamma$ point. The Dirac point has only two-fold degeneracy, therefore is protected against any non TRS-breaking scattering by the Kramers' theorem. The surface state connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within the Brillouin zone. Thus at the zone boundary, the Kramers' theorem is satisfied by the combination of the surface states on the opposite sides of the material, which have opposite spins.
+In the example given in figure~\ref{fig:bg_ti}, the surface state is formed by a single spin-polarized Dirac cone, with the Dirac point at the $\Gamma$ point. The Dirac point has only two-fold degeneracy, therefore is protected against any scattering that does not break TRS by the Kramers' theorem. The surface state connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within the Brillouin zone. Thus at the zone boundary, the Kramers' theorem is satisfied by the combination of the surface states on the opposite surfaces.
+
+If there are even number of such spin-parlized Dirac cone intersecting the Fermi level (figure~\ref{fig:bg_ti_double}a), %
+\begin{figure}[ht]%
+    \centering%
+    \includegraphics[width=0.85\columnwidth]{figs_theories/band_ti_double}%
+    \caption[Adiabatic elimination of two Dirac cones]{\label{fig:bg_ti_double}Adiabatic elimination of two Dirac cones. (a)~Two spin-polarized Dirac cones coexist at the $\Gamma$ point, shifted in energy so that both can be seen. (b)~A gap can be opened at the Fermi level by adiabatic deformation of the electronic bands, without violating the Kramers' theorem.}%
+\end{figure}%
+%
+since there are even number of states of each spin at any given momentum, by adiabatically deforming the bands, \textit{e.g.}, by switching on a perturbation in the von Neumann--Wigner problem described above, a gap may be opened at the Fermi level without violating the Kramers' theorem (figure~\ref{fig:bg_ti_double}b). If there are odd numbers of such spin-polarized Dirac cone intersecting the Fermi level, on the other hand, the existence of at least one Diract point is topologically protected. Since the electronic state of one spin direction crosses the Fermi level for an odd number of times, tracing from one Brillouin zone boundary, passing through each Dirac point, to another Brillouin zone boundary, no adiabatic deformation can remove all crossings from the Fermi level~\cite{Kane2005}.
+
+Near the Dirac point of a spin-polarized Dirac cone, the spin and the momentum of an electron are locked in a Rashba-like manner. The leading term of the electronic Hamiltonian is therefore%
+\begin{equation}%
+    \op{H}_{surf} = A (\vec{\sigma} \times \vec{k}) \cdot \vu*{z}~.\label{eq:surf_Rashba}%
+\end{equation}%
+In a diffusive conduction r\'egime (see chapter~\ref{sec:drude}), such spin-momentum locking should manifest as the weak antilocalization
