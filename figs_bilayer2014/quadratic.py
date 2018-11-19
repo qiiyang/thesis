@@ -58,11 +58,12 @@ if __name__ == '__main__':
     sub = sub_a
     sub.text(0.2, 0.8, "(a)", transform=sub.transAxes, ha="right", va="center", size="large")
     
-    sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=False, top=True, left=True, right=False, labelleft=True, labelright=False, labeltop=True, labelbottom=False)
+    sub.tick_params(axis='both', which='both', direction="in", bottom=False, top=True, left=True, right=False, labelleft=True, labelright=False, labeltop=True, labelbottom=False)
     sub.set_xlabel(r"$H$ (T $/\mu_0$)")
     sub.set_ylabel(r"$\Delta{}R(H) / R(0) / 10^{-2}$")
     sub.xaxis.set_label_position("top")
     sub.yaxis.set_label_position("left")
+    sub.yaxis.set_label_coords(-0.20, 0.5)
     sub.set_xlim(xlim)
     yunit = 0.01
     
@@ -106,11 +107,12 @@ if __name__ == '__main__':
     sub = sub_b
     sub.text(0.9, 0.2, "(b)", transform=sub.transAxes, ha="right", va="center", size="large")
     
-    sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=False, top=True, left=False, right=True, labelleft=False, labelright=True, labeltop=True, labelbottom=False)
+    sub.tick_params(axis='both', which='both', direction="in", bottom=False, top=True, left=False, right=True, labelleft=False, labelright=True, labeltop=True, labelbottom=False)
     sub.set_xlabel(r"$H$ (T $/\mu_0$)")
     sub.set_ylabel(r"$\Delta{}R(H) / R(0) / 10^{-2}$")
     sub.xaxis.set_label_position("top")
     sub.yaxis.set_label_position("right")
+    sub.yaxis.set_label_coords(1.18, 0.5)
     sub.set_xlim(xlim)
     yunit = 0.01
     
@@ -155,11 +157,12 @@ if __name__ == '__main__':
     sub.text(0.9, 0.8, "(c)", transform=sub.transAxes, ha="right", va="center", size="large")
     sub.text(0.45, 0.2, "$T_C$", transform=sub.transAxes, ha="right", va="center")
     
-    sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=True, top=False, left=True, right=False, labelleft=True, labelright=False, labeltop=False, labelbottom=True)
+    sub.tick_params(axis='both', which='both', direction="in", bottom=True, top=False, left=True, right=False, labelleft=True, labelright=False, labeltop=False, labelbottom=True)
     sub.set_xlabel("$T / \mathrm{K}$")
     sub.set_ylabel("$a / (\mu_0 / \mathrm{T})^{2}$")
     sub.xaxis.set_label_position("bottom")
     sub.yaxis.set_label_position("left")
+    sub.yaxis.set_label_coords(-0.20, 0.5)
     
     xminor_locator = AutoMinorLocator(5)
     sub.xaxis.set_minor_locator(xminor_locator)
@@ -180,11 +183,12 @@ if __name__ == '__main__':
     sub.text(0.9, 0.8, "(d)", transform=sub.transAxes, ha="right", va="center", size="large")
     sub.text(0.45, 0.2, "$T_C$", transform=sub.transAxes, ha="right", va="center")
     
-    sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=True, top=False, left=False, right=True, labelleft=False, labelright=True, labeltop=False, labelbottom=True)
+    sub.tick_params(axis='both', which='both', direction="in", bottom=True, top=False, left=False, right=True, labelleft=False, labelright=True, labeltop=False, labelbottom=True)
     sub.set_xlabel("$T / \mathrm{K}$")
     sub.set_ylabel("$a / (\mu_0 / \mathrm{T})^{2} / 10^{-3}$")
     sub.xaxis.set_label_position("bottom")
     sub.yaxis.set_label_position("right")
+    sub.yaxis.set_label_coords(1.18, 0.5)
     
     xminor_locator = AutoMinorLocator(5)
     sub.xaxis.set_minor_locator(xminor_locator)
