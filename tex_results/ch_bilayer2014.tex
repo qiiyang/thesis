@@ -26,7 +26,7 @@ To control for potential differences between Bi$_2$Se$_3$ thin films by PLD and 
 \begin{table}[ht]
     \centering
     \begin{tabularx}{0.6\columnwidth}[t]{l|l|X}
-    \caption[Summary of Bi$_2$Se$_3$ thin films and Bi$_2$Se$_3$--EuS bilayer samples]{\label{tab:bl2014_samples}Summary of Bi$_2$Se$_3$ thin films and Bi$_2$Se$_3$--EuS bilayer samples in this chapter. All samples are on Al$_2$O$_3$ (0001) substrates. The Bi$_2$Se$_3$ layers on the TI and BL samples with the same numerical suffix were deposited in the same PLD session.}\\
+    \caption[Summary of Bi$_2$Se$_3$ thin films and Bi$_2$Se$_3$--EuS bilayer samples]{\label{tab:bl2014_samples}Summary of Bi$_2$Se$_3$ thin films and Bi$_2$Se$_3$--EuS bilayer samples discussed in this chapter. All samples are on Al$_2$O$_3$ (0001) substrates. The Bi$_2$Se$_3$ layers on the TI and BL samples with the same numerical suffix were deposited in the same PLD session.}\\
 		\hline\hline
         Samples & Configurations & TI Thicknesses\\
         \hline
@@ -44,27 +44,25 @@ The Bi$_2$Se$_3$ layers on the bilayer (BL) and Bi$_2$Se$_3$--only (TI) samples 
 
 
 \section{Magnetic Properties}\label{sec:bl2014_mag}
-A crucial condition for the ferromagnet to affect the topological insulator is to break the time-reversal symmetry (TRS) in the relevant dimensions, \textit{e.g.,} by a magnetization perpendicular to the interface~\cite{TI_Col, QAH_TI_Yu, MnSe}. The perpendicular magnetization in EuS thin films was confirmed by SQUID magnetometry, and discussed in chapter~\ref{ch:EuS} (figure~\ref{fig:EuS_MvH_z}). Since such TRS breaking can be directly probed by measuring the polar Kerr effect with a Sagnac interferometer~\cite{Xia2006}, the bilayer sample BL3 was measured with Sagnac interferometry in two configurations.
+A crucial condition for the ferromagnet to affect the topological insulator is to break the time-reversal symmetry (TRS) in the relevant dimensions, \textit{e.g.,} by a magnetization perpendicular to the interface~\cite{TI_Col, QAH_TI_Yu, MnSe}. The perpendicular magnetization in EuS thin films was confirmed by SQUID magnetometry, and discussed in chapter~\ref{ch:EuS}. A ferromagnetic transition was observed at the Curie temperature $T_C \approx \SI{16}{K}$ (figure~\ref{fig:EuS_magnetic}).
 
-Figure~\ref{fig:bl2014_Fried} shows the Kerr angles at $T=\SI{10}{K}$ measured by a scanning Sagnac interferometer tracing a line across the boundary between a bare EuS region and one covered with a Bi$_2$Se$_3$ layer.\footnote{Scanning Sagnac interferometry was carried out by Alexander Fried.}
-%
-\begin{figure}[ht]%
-\centering%
-\includegraphics[width=0.75\columnwidth]{figs_bilayer2014/fried}
-\caption[Scanning Polar Kerr effect measurements on a Bi$_2$Se$_3$--EuS bilayer]{\label{fig:bl2014_Fried}(Color online) Polar Kerr effect measured by a scanning Sagnac interferometers at $T=\SI{10}{K}$. Kerr angles were measured as functions of applied magnetic fields and in-plane distance across the edge of the Bi$_2$Se$_3$ layer, where $x<0$ region is bare EuS and $x>0$ is Bi$_2$Se$_3$ on top of EuS.}%
-\end{figure} %
-The Kerr angle is reduced by the presence of the Bi$_2$Se$_3$ while remains finite in size.
-
+Since such TRS breaking can be directly probed by measuring the polar Kerr effect~\cite{Xia2006}, the bilayer sample BL3 was measured with Sagnac interferometry in two configurations. Measured at a fixed position where the EuS is covered by the Bi$_2$Se$_3$ layer,\footnote{Polar Kerr effect at fixed position was measured and analyzed by Elisabeth Schemm.} the Kerr angles exhibit hysteresis at $T=\SI{310}{mK}$ in a sweeping magnetic field perpendicular to the film (figure~\ref{fig:bl2014_SchemmH}),\footnote{Error bars in this chapter represent 90\% confidence intervals.}%
 %
 \begin{figure}[ht]%
 \centering%
 \subfloat{\label{fig:bl2014_SchemmT}}%
 \subfloat{\label{fig:bl2014_SchemmH}}%
 \includegraphics[width=\columnwidth]{figs_bilayer2014/schemm}
-\caption[Polar Kerr effect in Bi$_2$Se$_3$--EuS bilayers]{(Color online) Polar Kerr effect measured by Sagnac interferometers. Kerr angles were measured (a)~at $T=\SI{10}{K}$ as functions of applied magnetic fields and in-plane distance across the edge of the Bi$_2$Se$_3$ layer, where $x<0$ region is bare EuS and $x>0$ is Bi$_2$Se$_3$ on top of EuS; and at a fixed point on Bi$_2$Se$_3$ / EuS bilayer: (b) in zero magnetic field as a function of increasing temperature; (c) at $T=\SI{310}{mK}$ as functions of sweeping magnetic field, where the arrows denote the direction of field sweeps.}%
-\end{figure}%
+\caption[Polar Kerr effect in Bi$_2$Se$_3$--EuS bilayers]{(Color online) Polar Kerr effect measured by a Sagnac interferometer. Kerr angles were measured (a) at $T=\SI{310}{mK}$ as functions of the sweeping magnetic field perpendicular to the film, where the arrows denote the direction of field change; (b) in zero magnetic field as a function of increasing temperature, after exposure to a 5~kOe field at \SI{310}{mK}.}%
+\end{figure} %
 %
-At a fixed point on Bi$_2$Se$_3$ covered EuS area, the polar Kerr effect exhibits a transition at the Curie temperature of EuS $T_C\approx\SI{16}{K}$ (figure~\ref{fig:bl2014_SchemmT}) and hysteresis in a sweeping magnetic field (figure~\ref{fig:bl2014_SchemmH}), consistent with an origin in ferromagnetism.\footnote{Polar Kerr effect at fixed location was measured by Elisabeth Schemm.}
+and disappear when the temperature exceeds the $T_C$ of EuS (figure~\ref{fig:bl2014_SchemmH}). This confirms that the TRS breaking observed is originated from the ferromagnetic state in the EuS. When measured at $T=\SI{10}{K}$, and scanning on a straight line across the boundary between a bare EuS region and one covered by the Bi$_2$Se$_3$ layer,\footnote{Scanning Sagnac interferometry was carried out and analyzed by Alexander Fried.} the Kerr angles are reduced by the presence of the Bi$_2$Se$_3$ while remaining finite in size (figure~\ref{fig:bl2014_Fried}).%
+%
+\begin{figure}[ht]%
+\centering%
+\includegraphics[width=0.95\columnwidth]{figs_bilayer2014/fried}
+\caption[Scanning polar Kerr effect measurements on a Bi$_2$Se$_3$--EuS bilayer]{\label{fig:bl2014_Fried}(Color online) Polar Kerr effect measured by a scanning Sagnac interferometers at $T=\SI{10}{K}$. Kerr angles were measured as functions of applied magnetic fields and in-plane distance across the edge of the Bi$_2$Se$_3$ layer, where $x<0$ region is bare EuS and $x>0$ is Bi$_2$Se$_3$ on top of EuS.}%
+\end{figure}%
 
 \section{Emergent Negative Magnetoresistance}\label{sec:bl2014_negtive_MR}
 Hitherto, the data presented in this dissertation demonstrated that the important features necessary for a reliable study of the TI-IF proximity effect, which are an insulating ferromagnet with a perpendicular anisotropy component, and a well defined interface to the TI material, are all met in our bilayer thin films. The transport properties of the bilayer samples were studied using the van der Pauw technique. For shaping the layers in figure~\ref{fig:bl2014_sketch}, we used shadow masks to produce gradual height profiles and smooth overlapping near the edges of Titanium contacts. The effectiveness was confirmed with scanning electron microscopy (SEM). For comparison, Bi$_2$Se$_3$-only samples were made in each of the PLD sessions in which the Bi$_2$Se$_3$ of bilayers were deposited, with Ohmic contacts between Bi$_2$Se$_3$ and bare Al$_2$O$_3$ (0001) substrates, i.e. identical configuration to figure~\ref{fig:bl2014_sketch} except for the absence of an EuS layer. To examine the relevance of surface conduction, samples with different thicknesses for the Bi$_2$Se$_3$ layer were fabricated and compared. Table~\ref{tab:bl2014_samples} lists all the samples to be discussed in this chapter. The Bi$_2$Se$_3$ layers on the bilayer (BL) and Bi$_2$Se$_3$-only (TI) samples with the same numerical suffix were deposited in the same batch.
