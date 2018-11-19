@@ -45,6 +45,7 @@ if __name__ == '__main__':
     
     d["mr"] = d["R"] / R0 - 1.0
     d.errors["mr"] = (d.errors["R"] + err2) / R0
+    d = datasets.downsample(d, 3, np.nanmean)
     
     plt.plot(d["H"], d["mr"], marker=None, color="#6b1799", linestyle="-", label="$0\degree$")
     
@@ -74,8 +75,9 @@ if __name__ == '__main__':
     
     d["mr"] = d["R"] / R0 - 1.0
     d.errors["mr"] = (d.errors["R"] + err2) / R0
+    d = datasets.downsample(d, 3, np.nanmean)
     
-    plt.plot(d["H"] * np.cos(30.0 / 180.0 * np.pi), d["mr"], marker=None, color="#1f4299", linestyle="-", label="$30\degree$")
+    plt.plot(d["H"] * np.cos(30.0 / 180.0 * np.pi), d["mr"], marker=None, color="#1f4299", linestyle="--", label="$30\degree$")
     
     
     # 45d
@@ -103,8 +105,9 @@ if __name__ == '__main__':
     
     d["mr"] = d["R"] / R0 - 1.0
     d.errors["mr"] = (d.errors["R"] + err2) / R0
+    d = datasets.downsample(d, 3, np.nanmean)
     
-    plt.plot(d["H"] * np.cos(45.0 / 180.0 * np.pi), d["mr"], marker=None, color="#12b812", linestyle="-", label="$45\degree$")
+    plt.plot(d["H"] * np.cos(42.0 / 180.0 * np.pi), d["mr"], marker=None, color="#12b812", linestyle="-", label="$45\degree$")
     
     
     # 60d
@@ -132,8 +135,9 @@ if __name__ == '__main__':
     
     d["mr"] = d["R"] / R0 - 1.0
     d.errors["mr"] = (d.errors["R"] + err2) / R0
+    d = datasets.downsample(d, 3, np.nanmean)
     
-    plt.plot(d["H"] * np.cos(55.0 / 180.0 * np.pi), d["mr"], marker=None, color="#e6c217", linestyle="-", label="$60\degree$")
+    plt.plot(d["H"] * np.cos(54.0 / 180.0 * np.pi), d["mr"], marker=None, color="#e6c217", linestyle="--", label="$60\degree$")
     
     # 70d
     fn = r"20130516_08_RvH_4K_70D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
@@ -160,8 +164,9 @@ if __name__ == '__main__':
     
     d["mr"] = d["R"] / R0 - 1.0
     d.errors["mr"] = (d.errors["R"] + err2) / R0
+    d = datasets.downsample(d, 3, np.nanmean)
     
-    plt.plot(d["H"] * np.cos(65.0 / 180.0 * np.pi), d["mr"], marker=None, color="#e67517", linestyle="-", label="$70\degree$")
+    plt.plot(d["H"] * np.cos(63.0 / 180.0 * np.pi), d["mr"], marker=None, color="#e67517", linestyle="-", label="$70\degree$")
     
     # 90d
     fn = r"20130516_07_RvH_4K_90D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
@@ -188,8 +193,9 @@ if __name__ == '__main__':
     
     d["mr"] = d["R"] / R0 - 1.0
     d.errors["mr"] = (d.errors["R"] + err2) / R0
+    d = datasets.downsample(d, 3, np.nanmean)
     
-    plt.plot(d["H"] * np.cos(73.0 / 180.0 * np.pi), d["mr"], marker=None, color="#e61717", linestyle="-", label="$90\degree$")
+    plt.plot(d["H"] * np.cos(72.0 / 180.0 * np.pi), d["mr"], marker=None, color="#e61717", linestyle="--", label="$90\degree$")
     
     plt.legend()
     plt.show()

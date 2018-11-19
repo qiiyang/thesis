@@ -109,6 +109,7 @@ if __name__ == '__main__':
     sub.plot(x_trans(data["T"]), y_trans(data["R"] * vdp / quantum_resistance), color=pal.bl3, marker="^", markerfacecolor="none", markersize=marker_size, linestyle="none", label="TI3")
     
     #legend = sub_b.legend(handlelength=1.0, handletextpad=0.5, ncol=1, loc='upper left', bbox_to_anchor=(1.15, 1.15))
+
     fig.set_tight_layout(tight)
     
     #fig.savefig(r'bls_out.pdf', format='pdf')
