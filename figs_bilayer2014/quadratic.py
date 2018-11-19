@@ -153,6 +153,7 @@ if __name__ == '__main__':
     # Sub fig c
     sub = sub_c
     sub.text(0.9, 0.8, "(c)", transform=sub.transAxes, ha="right", va="center", size="large")
+    sub.text(0.45, 0.2, "$T_C$", transform=sub.transAxes, ha="right", va="center")
     
     sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=True, top=False, left=True, right=False, labelleft=True, labelright=False, labeltop=False, labelbottom=True)
     sub.set_xlabel("$T / \mathrm{K}$")
@@ -171,11 +172,13 @@ if __name__ == '__main__':
     yunit= 1.e-8
     #print(d)
     sub.errorbar(d["T"], d["a"] / yunit, yerr= d["err"] / yunit * NSE, marker="x", color="#1f4299", markersize=marker_size, markerfacecolor="none", linestyle="none")
+    sub.axvline(x=15.7, ls="--", color="k")
     
     
     # Sub fig d
     sub = sub_d
     sub.text(0.9, 0.8, "(d)", transform=sub.transAxes, ha="right", va="center", size="large")
+    sub.text(0.45, 0.2, "$T_C$", transform=sub.transAxes, ha="right", va="center")
     
     sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=True, top=False, left=False, right=True, labelleft=False, labelright=True, labeltop=False, labelbottom=True)
     sub.set_xlabel("$T / \mathrm{K}$")
@@ -194,6 +197,7 @@ if __name__ == '__main__':
     yunit= 1.e-8 * 0.001
     #print(d)
     sub.errorbar(d["T"], d["a"] / yunit, yerr= d["err"] / yunit * NSE, marker="x", color="#1f4299", markersize=marker_size, markerfacecolor="none", linestyle="none")
+    sub.axvline(x=15.7, ls="--", color="k")
     
     fig.set_tight_layout(tight)
     #fig.savefig(r'quadratic_out.svg', format='svg')
