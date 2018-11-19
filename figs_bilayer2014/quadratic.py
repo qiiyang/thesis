@@ -50,7 +50,7 @@ if __name__ == '__main__':
     sub_c = fig.add_subplot(gs1[1, 0])
     sub_d = fig.add_subplot(gs1[1, 1])
         
-    fn1 = r"data/quadraticVar.dat"
+    fn1 = r"mr/quadraticVar.dat"
     q = datasets.load_csv(fn1, columns, has_header=False)
     
     xlim = [-0.6, 0.6]
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     yminor_locator = AutoMinorLocator(5)
     sub.yaxis.set_minor_locator(yminor_locator)
         
-    fn = r"data/20121020_02_RvH_2K_Ch1.10P.Al2O3.InterXX_Ch2.10Pa.EuS10.Al2O3.InterXX_Ch3.10Pb.EuS10.Al2O3.InterXX.dat"
+    fn = r"mr/20121020_02_RvH_2K_Ch1.10P.Al2O3.InterXX_Ch2.10Pa.EuS10.Al2O3.InterXX_Ch3.10Pb.EuS10.Al2O3.InterXX.dat"
     ch = 1
     data = ppmsana.import_dc(fn)[ch]
     
@@ -121,7 +121,7 @@ if __name__ == '__main__':
     yminor_locator = AutoMinorLocator(5)
     sub.yaxis.set_minor_locator(yminor_locator)
         
-    fn = r"data/20121022_08_RvH_30K_Ch1.10P.Al2O3.InterXX_Ch2.10Pa.EuS10.Al2O3.InterXX_Ch3.10Pb.EuS10.Al2O3.InterXX.dat"
+    fn = r"mr/20121022_08_RvH_30K_Ch1.10P.Al2O3.InterXX_Ch2.10Pa.EuS10.Al2O3.InterXX_Ch3.10Pb.EuS10.Al2O3.InterXX.dat"
     ch = 1
     data = ppmsana.import_dc(fn)[ch]
     
@@ -169,7 +169,7 @@ if __name__ == '__main__':
     yminor_locator = AutoMinorLocator(5)
     sub.yaxis.set_minor_locator(yminor_locator)
         
-    fn1 = r"data/quadraticVar.dat"
+    fn1 = r"me/quadraticVar.dat"
     d = datasets.load_csv(fn1, columns, has_header=False)
     #d = d.mask(d["T"] >= 10)
     yunit= 1.e-8
