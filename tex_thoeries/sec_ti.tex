@@ -1,6 +1,9 @@
-﻿A Dirac cone is an electronic dispersion relation that takes form of a conical surface near its apex. The apex of such conical surface is called the Dirac point. A Dirac cone represents two energy bands that are separated everywhere else, but have equal energy at the Dirac point.
+﻿A Dirac cone is an electronic dispersion relation that takes form of a conical surface near its apex. The apex of such conical surface is called the Dirac point. A Dirac cone represents two energy bands that are separated everywhere else, but have equal energy at the Dirac point. Near the Dirac point, the energy of an electron is related linearly to its crystal momentum, therefore its group velocity cannot be changed:%
+\begin{equation}
+    v_g = \frac{1}{\hbar}\frac{\diff E}{\diff k} = \mathrm{const.}
+\end{equation}
 
-Dirac points are often unstable in nature. Such tendency is illustrated by the von Neumann--Wigner problem~\cite{vonNeumann1993, Asano2011}. Consider an isolated Dirac cone, with the Dirac point at a wave vector $\vec{k}=\vec{k_0}$. In absence of any perturbation, the two bands forming the Dirac cone therefore form an eigenbasis of the electronic Hamiltonian. Labeling the two bands 1 \& 2, the Hamiltonian is therefore%
+Dirac points are often unstable in nature. Such tendency is illustrated by the von Neumann--Wigner problem~\cite{vonNeumann1993, Asano2011}. Consider an isolated Dirac cone, with the Dirac point at a wave vector $\vec{k}=\vec{k}_0$. In absence of any perturbation, the two bands forming the Dirac cone constitute an eigenbasis of the electronic Hamiltonian. Labeling the two bands 1 \& 2, the Hamiltonian is therefore%
 \begin{equation}
     \op{H}_0(\vec{k}) = %
         \begin{pmatrix}
@@ -20,13 +23,13 @@ The eigenvalues of the perturbed Hamiltonian are
 \begin{equation}
     E_\pm(\vec{k}) = \frac{1}{2} \qty(E_1(\vec{k}) + E_2(\vec{k})) \pm \frac{1}{2} \sqrt{\qty(E_1(\vec{k}) - E_2(\vec{k}))^2 + \abs{w(\vec{k})}^2}~.
 \end{equation}
-Therefore, albeit the two bands are otherwise degenerate at the Dirac point, $E_1(\vec{k_0}) = E_2(\vec{k_0})$, any scattering between the bands may open a gap $\Delta{}E = \abs{w(\vec{k_0})}$.
+Therefore, albeit the two bands are otherwise degenerate at the Dirac point, $E_1(\vec{k}_0) = E_2(\vec{k}_0)$, any scattering between the bands may open a gap $\Delta{}E = \abs{w(\vec{k}_0)}$.
 
-Certain symmetries may protect the degeneracy at the Dirac point, and prevent a gap from opening. A three-dimensional topological insulator (3D TI) is an example of such case~\cite{TI_Qi, TI_Col}. A 3D TI (in its strong sense) is a band insulator in its bulk, and possesses a surface state with an odd number of spin-polarized Dirac cones (figure~\ref{fig:bg_ti}). %
+Certain symmetries may protect the degeneracy at the Dirac point, and prevent a gap from opening. A three-dimensional topological insulator (3D TI) is an example of such case~\cite{TI_Qi, TI_Col}. A 3D TI (in its strong sense) is a band insulator in its bulk, and possesses a surface state with an odd number of spin-polarized Dirac cones within a Brillouin zone (figure~\ref{fig:bg_ti}). %
 \begin{figure}[ht]%
     \centering%
     \includegraphics[width=0.55\columnwidth]{figs_theories/band_ti}%
-    \caption[Band structure of a 3D topological insulator]{\label{fig:bg_ti}A one-dimensional slice of the band structure of a three-dimensional topological insulator, modeled after Bi$_2$Se$_3$~\cite{TI_electronic_structure_zhang}. The $x$--$y$ plane is defined by the local surface of the material while looking from the outside. The arrows denote the directions of the spin on the surface state, measured on the $y$-direction. The surface state has a spin-polarized Dirac dispersion, and connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within the Brillouin zone.}%
+    \caption[Band structure of a 3D topological insulator]{\label{fig:bg_ti}A one-dimensional slice of the band structure of a three-dimensional topological insulator, modeled after Bi$_2$Se$_3$~\cite{TI_electronic_structure_zhang}. The $x$--$y$ plane is defined by the local surface of the material while looking from the outside. The arrows denote the directions of the spin on the surface state, measured on the $y$-axis. The surface state has a spin-polarized Dirac dispersion, and connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within the Brillouin zone.}%
 \end{figure}%
 %
 It was shown that a 3D TI is obtained, in a crystal with inversion symmetry, by inversion of bands of opposite parities due to spin-orbit coupling at all time-reversal invariant high symmetry points in the momentum space~\cite{Fu2007}.
@@ -39,22 +42,22 @@ At the $\Gamma$ point, $\vec{k}=0$, this implies%
 \begin{equation}%
     \op{H}(0, \uparrow) = \op{H}(0, \downarrow)~.\label{eq:Kramer_0}%
 \end{equation}%
-At the Brillouin zone boundary, $\vec{k} = \vec{B}$, since by definition $\vec{B} = -\vec{B}$, equation~\ref{eq:trs} implies%
+At the Brillouin zone boundary, $\vec{k} = \vec{B}$. Since by definition $\vec{B} = -\vec{B}$, equation~\ref{eq:trs} implies%
 \begin{equation}%
     \op{H}(\vec{B}, \uparrow) = \op{H}(\vec{B}, \downarrow)~.\label{eq:Kramer_b}%
 \end{equation}%
 Equations \ref{eq:Kramer_0} \& \ref{eq:Kramer_b} together state that, at time-reversal invariant locations in the momentum-space, the electronic Hamiltonian has at least two-fold degeneracy due to the spin degree of freedom. This is known as the Kramers' theorem.
 
-In the example given in figure~\ref{fig:bg_ti}, the surface state is formed by a single spin-polarized Dirac cone, with the Dirac point at the $\Gamma$ point. The Dirac point has only two-fold degeneracy, therefore is protected against any scattering that does not break TRS by the Kramers' theorem. The surface state connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within the Brillouin zone. Thus at the zone boundary, the Kramers' theorem is satisfied by the combination of the surface states on the opposite surfaces.
+In the example given in figure~\ref{fig:bg_ti}, the surface state is formed by a single spin-polarized Dirac cone, with the Dirac point at the $\Gamma$ point. The Dirac point has only two-fold degeneracy, therefore is protected by the Kramers' theorem against any scattering that does not break TRS. The surface state connects to the bulk conduction band (BCB) and the bulk valence band (BVB) within the Brillouin zone. Thus at the zone boundary, the Kramers' theorem is satisfied by the combination of the surface states on the opposite surfaces.
 
-If there are even number of such spin-parlized Dirac cone intersecting the Fermi level (figure~\ref{fig:bg_ti_double}a), %
+If there are even number of such spin-parlized Dirac cone intersecting the Fermi level (figure~\ref{fig:bg_ti_double}a),%
 \begin{figure}[ht]%
     \centering%
     \includegraphics[width=0.85\columnwidth]{figs_theories/band_ti_double}%
     \caption[Adiabatic elimination of two Dirac cones]{\label{fig:bg_ti_double}Adiabatic elimination of two Dirac cones. (a)~Two spin-polarized Dirac cones coexist at the $\Gamma$ point, shifted in energy so that both can be seen. (b)~A gap can be opened at the Fermi level by adiabatic deformation of the electronic bands, without violating the Kramers' theorem.}%
-\end{figure}%
+\end{figure} %
 %
-since there are even number of states of each spin at any given momentum, by adiabatically deforming the bands, \textit{e.g.}, by switching on a perturbation in the von Neumann--Wigner problem described above, a gap may be opened at the Fermi level without violating the Kramers' theorem (figure~\ref{fig:bg_ti_double}b). If there are odd numbers of such spin-polarized Dirac cone intersecting the Fermi level, on the other hand, the existence of at least one Diract point is topologically protected. Since the electronic state of one spin direction crosses the Fermi level for an odd number of times, tracing from one Brillouin zone boundary, passing through each Dirac point, to another Brillouin zone boundary, no adiabatic deformation can remove all crossings from the Fermi level~\cite{Kane2005}.
+since there are even number of states of each spin at any given momentum, by adiabatically deforming the bands, \textit{e.g.}, by switching on a perturbation in the von Neumann--Wigner problem described above, a gap may be opened at the Fermi level without violating the Kramers' theorem (figure~\ref{fig:bg_ti_double}b). If there are odd numbers of such spin-polarized Dirac cone intersecting the Fermi level, on the other hand, the existence of at least one Diract point is topologically protected. Tracing from one Brillouin zone boundary, passing through each Dirac point, to another Brillouin zone boundary: since the electronic state of one spin direction crosses the Fermi level for an odd number of times, no adiabatic deformation can remove all crossings from the Fermi level~\cite{Kane2005}.
 
 Near the Dirac point of a spin-polarized Dirac cone, the spin and the momentum of an electron are locked in a Rashba-like manner. The leading term of the electronic Hamiltonian is therefore%
 \begin{equation}%
@@ -62,6 +65,6 @@ Near the Dirac point of a spin-polarized Dirac cone, the spin and the momentum o
 \end{equation}%
 where $\vu*{z}$ is normal to the surface~\cite{TI_Qi, TI_electronic_structure_zhang, Liu2010}. In a diffusive conduction r\'egime, such spin-momentum locking should manifest as the weak antilocalization effect (\textit{q.v.} section~\ref{sec:wl}). Indeed, such weak antilocalization effect was ubiquitously observed in high-quality topological insulator thin films in perpendicular magnetic fields, in the form of a sharp positive magnetoresistance~\cite{TI_WAL_Hongkong, TI_WAL_thickness, zhangli2012}.
 
-Since the protection of the Dirac point in a 3D TI is resulted from the combination of the time-reversal symmetry and an odd number of Fermi level crossings, the degeneracy at the Dirac point can be lifted, hence a gap opened, at the Dirac point by breaking one or both of the conditions. To impose even number of Fermi level crossings, the doubling of the Dirac cone as illustrated in figure~\ref{fig:bg_ti_double}b was observed in topological insulator ultra-thin films ($\lesssim 3~\mathrm{nm}$), where scatterings occur between the top and bottom surfaces, and a 3D TI is reduced to a 2D TI~\cite{ARPES_thickness}. The time-reversal symmetry, on the other hand, may be broken by a magnetic dopant (\textit{e.g.}, ref.~\cite{Chang2013}), which might have side effects of altering the bulk band structure, or by interfacing with a ferromagnetic layer~\cite{TI_Col, QAH_TI_Yu, MnSe}, which replace bulk-altering effects with interface effects.
+Since the protection of the Dirac point in a 3D TI is due to the combination of the TRS and an odd number of Fermi level crossings, the degeneracy at the Dirac point can be lifted, hence a gap opened, at the Dirac point by breaking one or both of the conditions. To impose even number of Fermi level crossings, the doubling of the Dirac cone as illustrated in figure~\ref{fig:bg_ti_double}b was observed in topological insulator ultra-thin films ($\lesssim 4~\mathrm{nm}$), where scatterings occur between the top and bottom surfaces, and a 3D TI is reduced to a 2D TI~\cite{ARPES_thickness}. The TRS, on the other hand, may be broken by a magnetic dopant (\textit{e.g.}, ref.~\cite{Chang2013}), which might have side effects of altering the bulk band structure, or by interfacing with a ferromagnetic layer~\cite{TI_Col, QAH_TI_Yu, MnSe}, which replace bulk-altering effects with interface effects.
 
-The remainder of this thesis focuses on investigating the effects of the proximity between a 3D TI and a ferromagnet by experimenting with TI-ferromagnet thin film bilayers. Such experiments require a set of properties of the ferromagnetic layer. Firstly its magnetization needs to have a component perpendicular to the thin film~\cite{MnSe}. Secondly, such perpendicular magnetization should be uniformly distributed, in order to have well-controlled magnetic domains. Thirdly, the interface between the TI and the ferromagnet needs to be well-defined, in order to ensure good proximity between the two materials. Finally, the ferromagnet itself should be insulating, in order not to contribute to electric conduction itself.
+The remainder of this thesis focuses on investigating the effects of the proximity between a 3D TI and a ferromagnet by experimenting with TI--ferromagnet thin film bilayers. Such experiments require a set of properties of the ferromagnetic layer. Firstly its magnetization needs to have a component perpendicular to the thin film~\cite{MnSe}. Secondly, such perpendicular magnetization should be uniformly distributed, in order to have well-controlled magnetic domains. Thirdly, the interface between the TI and the ferromagnet needs to be well-defined, in order to ensure good proximity between the two materials. Finally, the ferromagnet itself should be insulating, in order not to contribute to electric conduction itself.
