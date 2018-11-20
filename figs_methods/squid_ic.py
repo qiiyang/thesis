@@ -55,5 +55,5 @@ if __name__ == '__main__':
     fig.tight_layout()
     
     fig.savefig(r'squid_ic.pdf', format='pdf')
-    fig.savefig(r'squid_ic.eps', format='eps')
+    #fig.savefig(r'squid_ic.eps', format='eps')
     

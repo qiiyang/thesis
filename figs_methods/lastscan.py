@@ -60,6 +60,6 @@ if __name__ == '__main__':
     
     fig.tight_layout()
     
-    #fig.savefig(r'lastscan.pdf', format='pdf')
-    fig.savefig(r'lastscan.eps', format='eps')
+    fig.savefig(r'lastscan.pdf', format='pdf')
+    #fig.savefig(r'lastscan.eps', format='eps')
     
