@@ -5,26 +5,26 @@ A Josephson's junction is two pieces of superconductors separated by a thin barr
     \caption[Josephson's junction]{\label{fig:josephson}(Color online) Schematic illustration of a Josephson's junction. Two pieces of superconductors are separated by a thin barrier that is either an insulator or a normal conductor. When the barrier is sufficiently thin, the supercurrent tunnels through the barrier.}%
 \end{figure}%
 %
-When the barrier is sufficiently thin, the supercurrent tunnels through the barrier, thereby the junction can sustain a constant current without applied voltage. This is referred to as the Josephson effect. The voltage across the junction, $V$, the supercurrent tunneling through the barrier, $i$, are related to the the difference between the phases of the Ginzburg-Landau order parameters on the two sides of the barrier $\Delta\theta$~\cite{Josephson1962, Josephson1974}:%
+When the barrier is sufficiently thin, the supercurrent tunnels through the barrier, thereby the junction can sustain a constant current without applied voltage. This is known as the Josephson effect. The voltage across the junction, $V$, the supercurrent tunneling through the barrier, $i$, are related to the the difference between the phases of the Ginzburg-Landau order parameters on the two sides of the barrier, $\Delta\theta$:~\cite{Josephson1962, Josephson1974}
 \begin{align}
     V(t) &= \frac{\hbar}{2e}\frac{\diff \Delta\theta(t)}{\diff t}~,\\
     i(t) &= i_c\sin\left(\Delta\theta(t)\right)~.\label{eq:Josephson_I}
 \end{align}%
 The current constant $i_c$ is referred to as the critical current, namely the maximal current can pass through the junction without an applied voltage.
 
-A Superconducting QUantum Interference Device (SQUID) is two Josephson's junctions connected by a superconductor in parallel (figure~\ref{fig:squid}). %
+A superconducting quantum interference device (SQUID) is two Josephson's junctions connected by a superconductor in parallel (figure~\ref{fig:squid}). %
 \begin{figure}[ht]%
 	\centering%
     \includegraphics[width=0.65\columnwidth]{figs_methods/squid}%
-    \caption[Superconducting quantum interference device]{\label{fig:squid}(Color online) Schematic illustration of a superconducting quantum interference device (SQUID). An ideal SQUID functions as a Fraunhoffer interferometer measuring the external flux through the loop.}%
+    \caption[Superconducting quantum interference device]{\label{fig:squid}(Color online) Schematic illustration of a superconducting quantum interference device (SQUID).}%
 \end{figure}%
 %
-In an ideal SQUID, the two Josephson's junctions are identical, the geometry is symmetric, and the area enclosed by the loop is small hence the electromagnetically induced screening current is negligible. An external magnetic flux $\Phi$ through the SQUID loop introduces a difference between the phase differences of the two junctions~\cite{Annett}:%
+In an ideal SQUID, the two Josephson's junctions are identical, the geometry symmetric, and the area enclosed by the loop is small, hence the electromagnetically induced screening current negligible. An external magnetic flux $\Phi$ through the SQUID loop introduces a difference between the phase differences across the two junctions~\cite{Annett}:%
 \begin{align}
     \Delta\theta_1 - \Delta\theta_2 &= \frac{2e}{\hbar}\Phi\nonumber\\
         &= 2\pi\frac{\Phi}{\Phi_0}~,\label{eq:SQUID}
 \end{align}%
-where $\Phi_0 = \frac{h}{2e}$ is the magnetic flux quantum. Equations~\ref{eq:Josephson_I}~\&~\ref{eq:SQUID} together illustrate that the combined supercurrent $I$ as a function of the external magnetic flux $\Phi$ is a Fraunhoffer interference pattern formed by the superposition of the supercurrents through either junctions. Let $\Delta\bar{\theta}(t) = \left[\Delta\theta_1(t) + \Delta\theta_2(t)\right] / 2$. The total supercurrent through the SQUID is therefore%
+where $\Phi_0 = \frac{h}{2e}$ is the magnetic flux quantum. Equations~\ref{eq:Josephson_I}~\&~\ref{eq:SQUID} together illustrate that the combined supercurrent $I$ as a function of the external magnetic flux $\Phi$ is a Fraunhoffer interference pattern formed by the superposition of the supercurrents through each junctions. Let $\Delta\bar{\theta}(t) = \left[\Delta\theta_1(t) + \Delta\theta_2(t)\right] / 2$. The total supercurrent through the SQUID is therefore%
 \begin{equation}
     I(t) = i_1(t) + i_2(t) = 2i_c\cos\left(\frac{\pi\Phi}{\Phi_0}\right)\sin\left(\Delta\bar{\theta}(t)\right)~.
 \end{equation}%
@@ -35,12 +35,12 @@ The critical current, namely the maximal supercurrent through the SQUID, is ther
 \begin{figure}[ht]%
 	\centering%
     \includegraphics[width=0.8\columnwidth]{figs_methods/squid_ic}%
-    \caption[Oscillations in the critical current of a SQUID]{\label{fig:squid_ic}The critical current of an ideal SQUID as a function of external magnetic flux.}%
+    \caption[Oscillations in the critical current of a SQUID]{\label{fig:squid_ic}The critical current of an ideal SQUID as a function of external magnetic flux, resembling a Fraunhoffer interference pattern.}%
 \end{figure}%
-%
-When moving a magnetic dipole through a SQUID loop, the change in the magnetic flux introduced by the dipole can therefore be measured by measuring the critical current $I_c$, and counting the periods of the oscillation. The diple moment can hence calculated from the change in magnetic flux and the geometry of the SQUID.
 
-The SQUIDs used for magnetometry in practice have several significant differences from an ideal one. Firstly, a practical SQUID has finite size, and is typically fabricated with a thin film typy-II superconductor. Therefore a screening current up to $\Phi_0 / 2L$ is induced by the magnetic flux through the loop, and oscillates as a function of the flux with a periodicity of $\Phi_0$. The screening current introduces an asymmetry between the two junctions. Consequently, the minima in the critical current exhibits non-zero values~\cite{Clarke1976}. Secondly, due to its zero resistance in the superconducting state, it is inconvenient to apply a constant voltage across a SQUID. Instead, a constant bias current $I_0 > I_c$ is applied through the SQUID, and the oscillations in the critical current is measured indirectly by measuring the oscillations in the voltage due to the current-voltage relation changing with $I_c$ (figure~\ref{fig:squid_iv}). %
+When magnetic dipole that is perpendicular to the SQUID loop passes through the loop, the change in the magnetic flux introduced by the dipole can be measured by measuring the critical current $I_c$, and counting the periods of the oscillation. The dipole moment can be hence calculated from the change in magnetic flux and the geometry of the SQUID.
+
+The SQUIDs used for magnetometry in practice have several significant differences from an ideal one. Firstly, a practical SQUID has finite size, and is typically fabricated with a thin film type-II superconductor. Therefore a screening current up to $\Phi_0 / 2L$ is induced by the magnetic flux through the loop, where $L$ is the self-induction of the loop, and oscillates as a function of the flux with a periodicity of $\Phi_0$. The screening current introduces an asymmetry between the two junctions. Consequently, the minima in the critical current exhibits non-zero values~\cite{Clarke1976}. Secondly, due to its zero resistance in the superconducting state, it is inconvenient to apply a constant voltage across a SQUID. Instead, a constant bias current $I_0 > I_c$ is applied through the SQUID, and the oscillations in the critical current is measured indirectly by measuring the oscillations in the voltage due to the current-voltage relation changing with $I_c$ (figure~\ref{fig:squid_iv}). %
 \begin{figure}[ht]%
 	\centering%
     \includegraphics[width=0.8\columnwidth]{figs_methods/squid_iv}%
@@ -48,12 +48,12 @@ The SQUIDs used for magnetometry in practice have several significant difference
 \end{figure}%
 In such current r\'egime, for each Josephson's junction, the normal resistance in the barrier serve as finite resistance $R$ in parallel of the junction, whereas the superconductors on both sides of the junctions introduce a finite shunt capacitance $C$. The resistance of the junction barrier was chosen such that dimensionless parameter $\beta_c = 2\pi{}R^2i_cC \lesssim 1$, which results in a non-hysteric current-voltage characteristics~\cite{Hansma1971}.
 
-The SQUID magnetometers used to measure samples discussed in this thesis are commercial MPMS systems from Quantum Design. To allow measurements in external magnetic fields, a set of four SQUID coils are combined to measure the second derivative of magnetic flux as a function of longitudinal position~\cite{mpms_hardware}. A sample is fixed mechanically in a drinking straw that is in turn mechanically attached to a driven rod. As the sample moves up and down through the SQUID loops, the signals from the SQUID coils are automatically recorded as functions of position of the sample.
+The SQUID magnetometers used to measure samples discussed in this thesis are commercial Quantum Design MPMS systems. To allow measurements in external magnetic fields, a set of four SQUID coils are combined to measure the second derivative of magnetic flux as a function of longitudinal position~\cite{mpms_hardware}. A sample is fixed mechanically in a drinking straw that is in turn mechanically attached to a mounting rod. As the sample moves up and down through the SQUID loops, the signals from the SQUID coils are automatically recorded as functions of position of the sample.
 
-The magnetic moments of the samples are obtained by fitting the raw data collected from the SQUID coils to predefined models (figure~\ref{fig:lastscan}, also see figure~3-7 in ref.~\cite{mpms_software}). %
+The magnetic moments of the samples are obtained by fitting the raw data collected from the SQUID coils to a predefined model (figure~\ref{fig:lastscan}, also see figure~3--7 in ref.~\cite{mpms_software}). %
 \begin{figure}[ht]%
 	\centering%
     \includegraphics[width=0.8\columnwidth]{figs_methods/lastscan}%
-    \caption[An example of SQUID magnetometry data]{\label{fig:lastscan}An example of SQUID signals produced by a ferromagnetic sample. The crosses are measured voltages; whereas the solid line is fitted model. The model assumes that the signal is from single dipole moment, and requires the sample to be centered relative to the SQUID coils prior to measurements.}%
+    \caption[An example of SQUID magnetometry data]{\label{fig:lastscan}An example of SQUID signals produced by a ferromagnetic sample. The crosses are measured voltages; whereas the solid line is fitted model. The model assumes that the signal is from a single dipole moment, and requires the sample to be centered relative to the SQUID coils prior to measurements.}%
 \end{figure}%
-The model presently used by Quantum Design MPMS and other commercial systems assumes that the signal is from single dipole moment, and requires the sample to be centered relative to the SQUID coils prior to measurements~\cite{mpms_software, squid_bg, squid_center_error}. Both of these constraints require the sample either has a much greater magnetic moment than the surrounding materials (e.g., the drinking straw and the padding material), or to be very close to the dominant magnetic moment. The impact of these constraints will be discussed in later chapters in context of our thin film bilayer samples, and circumvented by the AC susceptibility measurements discussed in section~\ref{sec:acm}.
+The model presently used by Quantum Design MPMS and other commercial systems assumes that the signal is from a single dipole moment, and requires the sample to be centered relative to the SQUID coils prior to measurements~\cite{mpms_software, squid_bg, squid_center_error}. Both of these constraints require the sample either has a much greater magnetic moment than the surrounding materials (\textit{e.g.}, the drinking straw and the padding material), or to be very close to the dominant magnetic moment. The impact of these constraints on our measurements will be discussed in later chapters, and circumvented by the AC susceptibility measurements discussed in section~\ref{sec:acm}.
