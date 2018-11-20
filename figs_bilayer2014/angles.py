@@ -111,7 +111,7 @@ if __name__ == '__main__':
     sub.text(0.15, 0.2, "(a)", transform=sub.transAxes, ha="right", va="center", size="large")
     
     sub.tick_params(axis='both', which='both', direction="in", bottom=False, top=True, left=True, right=False, labelleft=True, labelright=False, labeltop=True, labelbottom=False)
-    sub.set_xlabel(r"$H (T / \mu_0)$")
+    sub.set_xlabel(r"$H~(T / \mu_0)$")
     sub.set_ylabel(r"$\Delta R(H) / R(0) / 10^{-2}$")
     sub.xaxis.set_label_position("top")
     sub.xaxis.set_label_coords(1, 1.15)
@@ -155,7 +155,7 @@ if __name__ == '__main__':
     sub.text(0.15, 0.2, "(c)", transform=sub.transAxes, ha="right", va="center", size="large")
     
     sub.tick_params(axis='both', which='both', direction="in", bottom=True, top=False, left=True, right=False, labelleft=True, labelright=False, labeltop=False, labelbottom=True)
-    sub.set_xlabel(r"$H \cdot \cos(\theta^*) (T / \mu_0)$")
+    sub.set_xlabel(r"$H \cos(\theta^*)~(T / \mu_0)$")
     #sub.set_ylabel(r"$\Delta R(H) / R(0) / 10^{-2}$")
     sub.xaxis.set_label_position("bottom")
     sub.xaxis.set_label_coords(1, -0.15)

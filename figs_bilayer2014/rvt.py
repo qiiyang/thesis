@@ -55,8 +55,8 @@ if __name__ == '__main__':
     xlim = [2.0, 300.0]
     
     sub.tick_params(axis='both', which='both', direction="in", bottom=True, top=True, left=True, right=True, labelleft=True, labelright=False, labeltop=False, labelbottom=True)
-    sub.set_xlabel(r"$T (\mathrm{K})$")
-    sub.set_ylabel(r"$R_\Box (e^2/h)$")
+    sub.set_xlabel(r"$T~(\mathrm{K})$")
+    sub.set_ylabel(r"$R_\Box~(e^2/h)$")
     sub.xaxis.set_label_position("bottom")
     #sub.xaxis.set_label_coords(1, 1.15)
     sub.yaxis.set_label_position("left")
