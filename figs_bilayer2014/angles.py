@@ -71,10 +71,9 @@ def plot(fn, co, cos, ls, mk, label, subs):
     sub_c.plot(d1["H"] / H_unit * cos, d1["mr"] / mr_unit, marker=None, color=co, linestyle=ls, lw = lw, label=label)
     
     d = d1.mask(np.abs(d1["H"]) < H2)
-    #sub_b.plot(d["H"] / H_unit, d["mr"] / mr_unit, marker=None, color=co, linestyle=ls, lw = lw, label=label)
-    #sub_d.plot(d["H"] / H_unit * cos, d["mr"] / mr_unit, marker=None, color=co, linestyle=ls, lw = lw, label=label)
-    #sub_b.errorbar(d["H"] / H_unit, d["mr"] / mr_unit, yerr=d.errors["mr"] / mr_unit, marker="x", color=co, linestyle="none", lw = lw, label=label)
     sub_b.errorbar(d["H"] / H_unit, d["mr"] / mr_unit, yerr=d.errors["mr"] / mr_unit, marker=mk, markerfacecolor="none", color=co, linestyle="none", lw = lw2, mew=mew2, label=label)
+        
+    d = d1.mask(np.abs(d1["H"] * cos) < H2)
     sub_d.errorbar(d["H"] / H_unit * cos, d["mr"] / mr_unit, yerr=d.errors["mr"] / mr_unit, marker=mk, markerfacecolor="none", color=co, linestyle="none", lw = lw2, mew=mew2, label=label)
     
 
