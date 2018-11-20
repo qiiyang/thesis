@@ -109,7 +109,7 @@ if __name__ == '__main__':
     
     # Sub fig a
     sub = sub_a
-    sub.text(0.1, 0.8, "(a)", transform=sub.transAxes, ha="right", va="center", size="large")
+    sub.text(0.15, 0.2, "(a)", transform=sub.transAxes, ha="right", va="center", size="large")
     
     sub.tick_params(axis='both', which='both', direction="in", bottom=False, top=True, left=True, right=False, labelleft=True, labelright=False, labeltop=True, labelbottom=False)
     sub.set_xlabel(r"$H (T / \mu_0)$")
@@ -121,17 +121,17 @@ if __name__ == '__main__':
     
     sub.set_xlim(xlim)
     #sub.set_xticks(xticks)
-    #xminor_locator = AutoMinorLocator(5)
-    #sub.xaxis.set_minor_locator(xminor_locator)
+    xminor_locator = AutoMinorLocator(5)
+    sub.xaxis.set_minor_locator(xminor_locator)
     
     #sub.set_ylim([-15, 29])
     #sub.set_yticks(range(-10, 29, 10))
-    #yminor_locator = AutoMinorLocator(5)
-    #sub.yaxis.set_minor_locator(yminor_locator)
+    yminor_locator = AutoMinorLocator(5)
+    sub.yaxis.set_minor_locator(yminor_locator)
     
     # Sub fig b
     sub = sub_b
-    sub.text(0.1, 0.8, "(b)", transform=sub.transAxes, ha="right", va="center", size="large")
+    sub.text(0.25, 0.8, "(b)", transform=sub.transAxes, ha="right", va="center", size="large")
     
     sub.tick_params(axis='both', which='both', direction="in", bottom=False, top=True, left=False, right=True, labelleft=False, labelright=True, labeltop=True, labelbottom=False)
     #sub.set_xlabel(r"$H (T / \mu_0)$")
@@ -143,17 +143,17 @@ if __name__ == '__main__':
     
     sub.set_xlim(xlim2)
     #sub.set_xticks(xticks)
-    #xminor_locator = AutoMinorLocator(5)
-    #sub.xaxis.set_minor_locator(xminor_locator)
+    xminor_locator = AutoMinorLocator(10)
+    sub.xaxis.set_minor_locator(xminor_locator)
     
     #sub.set_ylim([-15, 29])
     #sub.set_yticks(range(-10, 29, 10))
-    #yminor_locator = AutoMinorLocator(5)
-    #sub.yaxis.set_minor_locator(yminor_locator)
+    yminor_locator = AutoMinorLocator(5)
+    sub.yaxis.set_minor_locator(yminor_locator)
     
     # Sub fig c
     sub = sub_c
-    sub.text(0.1, 0.1, "(c)", transform=sub.transAxes, ha="right", va="center", size="large")
+    sub.text(0.15, 0.2, "(c)", transform=sub.transAxes, ha="right", va="center", size="large")
     
     sub.tick_params(axis='both', which='both', direction="in", bottom=True, top=False, left=True, right=False, labelleft=True, labelright=False, labeltop=False, labelbottom=True)
     sub.set_xlabel(r"$H \cdot \cos(\theta^*) (T / \mu_0)$")
@@ -165,17 +165,17 @@ if __name__ == '__main__':
     
     sub.set_xlim(xlim)
     #sub.set_xticks(xticks)
-    #xminor_locator = AutoMinorLocator(5)
-    #sub.xaxis.set_minor_locator(xminor_locator)
+    xminor_locator = AutoMinorLocator(5)
+    sub.xaxis.set_minor_locator(xminor_locator)
     
     #sub.set_ylim([-15, 29])
     #sub.set_yticks(range(-10, 29, 10))
-    #yminor_locator = AutoMinorLocator(5)
-    #sub.yaxis.set_minor_locator(yminor_locator)
+    yminor_locator = AutoMinorLocator(5)
+    sub.yaxis.set_minor_locator(yminor_locator)
     
     # Sub fig d
     sub = sub_d
-    sub.text(0.1, 0.1, "(d)", transform=sub.transAxes, ha="right", va="center", size="large")
+    sub.text(0.25, 0.8, "(d)", transform=sub.transAxes, ha="right", va="center", size="large")
     
     sub.tick_params(axis='both', which='both', direction="in", bottom=True, top=False, left=False, right=True, labelleft=False, labelright=True, labeltop=False, labelbottom=True)
     #sub.set_xlabel(r"$H (T / \mu_0)$")
@@ -187,13 +187,13 @@ if __name__ == '__main__':
     
     sub.set_xlim(xlim2)
     #sub.set_xticks(xticks)
-    #xminor_locator = AutoMinorLocator(5)
-    #sub.xaxis.set_minor_locator(xminor_locator)
+    xminor_locator = AutoMinorLocator(10)
+    sub.xaxis.set_minor_locator(xminor_locator)
     
     #sub.set_ylim([-15, 29])
     #sub.set_yticks(range(-10, 29, 10))
-    #yminor_locator = AutoMinorLocator(5)
-    #sub.yaxis.set_minor_locator(yminor_locator)
+    yminor_locator = AutoMinorLocator(5)
+    sub.yaxis.set_minor_locator(yminor_locator)
     
     # 0d
     fn = r"angles/20130516_13_RvH_4K_0D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
