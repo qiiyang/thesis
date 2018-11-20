@@ -200,7 +200,7 @@ if __name__ == '__main__':
     cos = np.cos(0.0 * np.pi / 180.0)
     ls = "-"
     mk = "o"
-    label = r"$0^\circ$"
+    label = r"$0^\circ / 0^\circ$"
     plot(fn, co, cos, ls, mk, label, subs)
     
     
@@ -210,7 +210,7 @@ if __name__ == '__main__':
     cos = np.cos(27.0 * np.pi / 180.0)
     ls = "--"
     mk = "s"
-    label = r"$30^\circ$"
+    label = r"$30^\circ / 27^\circ$"
     plot(fn, co, cos, ls, mk, label, subs)
     
     # 45d
@@ -220,7 +220,7 @@ if __name__ == '__main__':
     cos = np.cos(42.0 * np.pi / 180.0)
     ls = "-"
     mk = "^"
-    label = r"$45^\circ$"
+    label = r"$45^\circ / 42^\circ$"
     plot(fn, co, cos, ls, mk, label, subs)
     
     # 60d
@@ -230,7 +230,7 @@ if __name__ == '__main__':
     cos = np.cos(55.0 * np.pi / 180.0)
     ls = "--"
     mk = "v"
-    label = r"$60^\circ$"
+    label = r"$60^\circ / 55^\circ$"
     plot(fn, co, cos, ls, mk, label, subs)
     
     # 70d
@@ -240,7 +240,7 @@ if __name__ == '__main__':
     cos = np.cos(61.0 * np.pi / 180.0)
     ls = "-"
     mk = "d"
-    label = r"$70^\circ$"
+    label = r"$70^\circ / 61^\circ$"
     plot(fn, co, cos, ls, mk, label, subs)
     
     # 89d
@@ -250,11 +250,11 @@ if __name__ == '__main__':
     mk = "x"
     cos = np.cos(72.0 * np.pi / 180.0)
     ls = "--"
-    label = r"$89^\circ$"
+    label = r"$89^\circ / 72^\circ$"
     plot(fn, co, cos, ls, mk, label, subs)
     
     #legend = sub_b.legend(title=r"$\theta=$", handlelength=1.5, handletextpad=0.5, ncol=1, loc='upper left', bbox_to_anchor=(1.25, 1.0))
-    legend = sub_a.legend(title=r"$\theta=$", handlelength=1.5, handletextpad=0.5, ncol=1, loc='upper left', bbox_to_anchor=(2.25, 1.0))
+    legend = sub_a.legend(title=r"$\theta / \theta^*$", handlelength=1.5, handletextpad=0.5, ncol=1, loc='upper left', bbox_to_anchor=(2.25, 1.0))
     legend = sub_d.legend(handlelength=1.5, handletextpad=0.5, ncol=1, loc='upper left', bbox_to_anchor=(1.25, 1.0))
     fig.set_tight_layout(tight)
     
