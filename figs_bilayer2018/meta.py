@@ -45,7 +45,7 @@ if __name__ == '__main__':
     paperwidth = 8.5
     fig = plt.figure(dpi=1200)
     p = 0.5
-    fig.set_size_inches([p * paperwidth, 0.3/0.4* p * paperwidth])
+    fig.set_size_inches([p * paperwidth, 0.4/0.4* p * paperwidth])
     
     # Sub figure layout
     gs1 = gridspec.GridSpec(1, 1)
@@ -96,7 +96,8 @@ if __name__ == '__main__':
     
     sub.axhline(y=1, color=pal.aid_lines, linestyle="--")
 
-    legend = sub.legend(handlelength=1.0, handletextpad=0.5, ncol=1, loc='upper left', bbox_to_anchor=(0.0, -0.16))
+    #legend = sub.legend(handlelength=1.0, handletextpad=0.5, ncol=1, loc='upper left', bbox_to_anchor=(0.0, -0.16))
+    legend = sub.legend(ncol=1, loc='upper left', bbox_to_anchor=(0.0, -0.16))
     
     fig.set_tight_layout(tight)
     
