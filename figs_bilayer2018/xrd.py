@@ -54,7 +54,7 @@ if __name__ == '__main__':
     
     paperwidth = 8.5
     fig = plt.figure(dpi=1200)
-    p = 0.62
+    p = 0.65
     fig.set_size_inches([p * paperwidth, 0.2/0.4* p * paperwidth])
     
     # Sub figure layout
