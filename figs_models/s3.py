@@ -46,7 +46,7 @@ if __name__ == '__main__':
     
     paperwidth = 8.5
     fig = plt.figure(dpi=1200)
-    fig.set_size_inches([0.65 * paperwidth, 0.3/0.4*0.6 * paperwidth])
+    fig.set_size_inches([0.7 * paperwidth, 0.3/0.4*0.6 * paperwidth])
     #fig.set_size_inches([3.375, 2.1])
     
     marker_size = 6
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     y_trans = lambda y: 1.0 / y
     xlim = [x_trans(2.0), x_trans(T_low)]
     
-    sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=False, top=True, left=True, right=False, labelleft=True, labelright=False, labeltop=True, labelbottom=False)
+    sub.tick_params(axis='both', which='both', direction="in", bottom=False, top=True, left=True, right=False, labelleft=True, labelright=False, labeltop=True, labelbottom=False)
     sub.set_xlabel(r"$\log_{10}(T / \textrm{K})$")
     sub.set_ylabel(r"$\sigma_\Box (e^2/h)$")
     sub.xaxis.set_label_position("top")
@@ -103,7 +103,7 @@ if __name__ == '__main__':
     xlim = [x_trans(T_low), x_trans(2.0)]
     #xlim = [x_trans(300.0), 0.025]
     
-    sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=False, top=True, left=False, right=True, labelleft=False, labelright=True, labeltop=True, labelbottom=False)
+    sub.tick_params(axis='both', which='both', direction="in", bottom=False, top=True, left=False, right=True, labelleft=False, labelright=True, labeltop=True, labelbottom=False)
     sub.set_xlabel(r"$T^{-1} (\mathrm{K}^{-1})$")
     sub.set_ylabel(r"$\log_{10}(R_\Box \cdot e^2/h)$")
     sub.xaxis.set_label_position("top")
@@ -135,7 +135,7 @@ if __name__ == '__main__':
     y_trans = lambda y: np.log10(y)
     xlim = [x_trans(T_low), x_trans(2.0)]
     
-    sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=True, top=False, left=True, right=False, labelleft=True, labelright=False, labeltop=False, labelbottom=True)
+    sub.tick_params(axis='both', which='both', direction="in", bottom=True, top=False, left=True, right=False, labelleft=True, labelright=False, labeltop=False, labelbottom=True)
     sub.set_xlabel(r"$T^{-1/3} (\mathrm{K}^{-1/3})$")
     sub.set_ylabel(r"$\log_{10}(R_\Box \cdot e^2/h)$")
     sub.xaxis.set_label_position("bottom")
@@ -166,7 +166,7 @@ if __name__ == '__main__':
     y_trans = lambda y: np.log10(y)
     xlim = [x_trans(T_low), x_trans(2.0)]
     
-    sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=True, top=False, left=False, right=True, labelleft=False, labelright=True, labeltop=False, labelbottom=True)
+    sub.tick_params(axis='both', which='both', direction="in", bottom=True, top=False, left=False, right=True, labelleft=False, labelright=True, labeltop=False, labelbottom=True)
     sub.set_xlabel(r"$T^{-1/2} (\mathrm{K}^{-1/2})$")
     sub.set_ylabel(r"$\log_{10}(R_\Box \cdot e^2/h)$")
     sub.xaxis.set_label_position("bottom")
@@ -188,7 +188,7 @@ if __name__ == '__main__':
     
     sub.plot(x_trans(data["T"]), y_trans(data["R"]), color=pal.s3, marker="x", markerfacecolor="none", markersize=marker_size, linestyle="none", label="S3")
     
-    legend = sub_b.legend(handlelength=1.0, handletextpad=0.5, ncol=1, loc='upper left', bbox_to_anchor=(1.15, 1.15))
+    legend = sub_b.legend(handlelength=1.0, handletextpad=0.5, ncol=1, loc='upper left', bbox_to_anchor=(1.2, 1.15))
     fig.set_tight_layout(tight)
     
     #fig.savefig(r'bls_out.pdf', format='pdf')

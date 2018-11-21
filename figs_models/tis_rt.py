@@ -34,7 +34,7 @@ if __name__ == '__main__':
     
     paperwidth = 8.5
     fig = plt.figure(dpi=1200)
-    fig.set_size_inches([0.6 * paperwidth, 0.15/0.4*0.6 * paperwidth])
+    fig.set_size_inches([0.7 * paperwidth, 0.15/0.4*0.7 * paperwidth])
     #fig.set_size_inches([3.375, 2.1])
     
     marker_size = 6
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     y_trans = lambda y: np.log10(y)
     xlim = [x_trans(2.0), x_trans(310.0)]
     
-    sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=True, top=True, left=True, right=False, labelleft=True, labelright=False, labeltop=False, labelbottom=True)
+    sub.tick_params(axis='both', which='both', direction="in", bottom=True, top=True, left=True, right=False, labelleft=True, labelright=False, labeltop=False, labelbottom=True)
     sub.set_xlabel(r"$T (\textrm{K})$")
     sub.set_ylabel(r"$\log_{10}(R_\Box \cdot e^2/h)$")
     sub.xaxis.set_label_position("bottom")
@@ -85,7 +85,7 @@ if __name__ == '__main__':
     y_trans = lambda y: np.log10(y)
     xlim = [x_trans(2.0), x_trans(310.0)]
     
-    sub.tick_params(axis='both', which='both', direction="in", pad=1, bottom=True, top=True, left=False, right=True, labelleft=False, labelright=True, labeltop=False, labelbottom=True)
+    sub.tick_params(axis='both', which='both', direction="in", bottom=True, top=True, left=False, right=True, labelleft=False, labelright=True, labeltop=False, labelbottom=True)
     sub.set_xlabel(r"$T (\textrm{K})$")
     sub.set_ylabel(r"$\log_{10}(R_\Box \cdot e^2/h)$")
     sub.xaxis.set_label_position("bottom")
