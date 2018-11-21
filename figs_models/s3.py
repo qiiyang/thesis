@@ -92,11 +92,12 @@ if __name__ == '__main__':
     sub.yaxis.set_minor_locator(yminor_locator)
     
     sub.plot(x_trans(data["T"]), y_trans(data["R"]), color=pal.s3, marker="x", markerfacecolor="none", markersize=marker_size, linestyle="none", label="S3")
+    sub.axvline(x=x_trans(14.5), linestyle="--", color="k")
     
     
     # Sub fig b
     sub = sub_b
-    sub.text(0.1, 0.8, "(b) TA", transform=sub.transAxes, ha="left", va="center")
+    sub.text(0.9, 0.2, "(b) TA", transform=sub.transAxes, ha="right", va="center")
    
     x_trans = lambda x: 1.0 / x
     y_trans = lambda y: np.log10(y)
@@ -125,11 +126,12 @@ if __name__ == '__main__':
     sub.yaxis.set_minor_locator(yminor_locator)
     
     sub.plot(x_trans(data["T"]), y_trans(data["R"]), color=pal.s3, marker="x", markerfacecolor="none", markersize=marker_size, linestyle="none", label="S3")
+    sub.axvline(x=x_trans(14.5), linestyle="--", color="k")
     
     
     # Sub fig c
     sub = sub_c
-    sub.text(0.1, 0.8, "(c) M-VRH", transform=sub.transAxes, ha="left", va="center")
+    sub.text(0.9, 0.2, "(c) M-VRH", transform=sub.transAxes, ha="right", va="center")
    
     x_trans = lambda x: np.power(x, -1.0/3.0)
     y_trans = lambda y: np.log10(y)
@@ -156,11 +158,12 @@ if __name__ == '__main__':
     sub.yaxis.set_minor_locator(yminor_locator)
     
     sub.plot(x_trans(data["T"]), y_trans(data["R"]), color=pal.s3, marker="x", markerfacecolor="none", markersize=marker_size, linestyle="none", label="S3")
+    sub.axvline(x=x_trans(14.5), linestyle="--", color="k")
     
     
     # Sub fig d
     sub = sub_d
-    sub.text(0.1, 0.8, "(d) ES-VRH", transform=sub.transAxes, ha="left", va="center")
+    sub.text(0.9, 0.2, "(d) ES-VRH", transform=sub.transAxes, ha="right", va="center")
    
     x_trans = lambda x: np.power(x, -1.0/2.0)
     y_trans = lambda y: np.log10(y)
@@ -187,6 +190,7 @@ if __name__ == '__main__':
     sub.yaxis.set_minor_locator(yminor_locator)
     
     sub.plot(x_trans(data["T"]), y_trans(data["R"]), color=pal.s3, marker="x", markerfacecolor="none", markersize=marker_size, linestyle="none", label="S3")
+    sub.axvline(x=x_trans(14.5), linestyle="--", color="k")
     
     legend = sub_b.legend(handlelength=1.0, handletextpad=0.5, ncol=1, loc='upper left', bbox_to_anchor=(1.2, 1.15))
     fig.set_tight_layout(tight)
