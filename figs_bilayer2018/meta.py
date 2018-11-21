@@ -44,8 +44,8 @@ if __name__ == '__main__':
     
     paperwidth = 8.5
     fig = plt.figure(dpi=1200)
-    p = 0.4
-    fig.set_size_inches([p * paperwidth, 0.4/0.4* p * paperwidth])
+    p = 0.5
+    fig.set_size_inches([p * paperwidth, 0.3/0.4* p * paperwidth])
     
     # Sub figure layout
     gs1 = gridspec.GridSpec(1, 1)
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     
     xticks = range(8)
     #xlabels = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"]
-    xlabels = ["A", "B", "C", "D", "E", "F", "G", "I"]
+    xlabels = ["A", "B", "C", "D", "E", "F", "G", "H"]
     
     #sub.set_xlim(xlim)
     sub.set_xticks(xticks)
