@@ -53,3 +53,4 @@ __pycache__
 # No analysis files
 analysis/
 *.dat
+*.ASC
