@@ -2,24 +2,54 @@
 \linespread{1.2}
 \usepackage{enumitem}
 
+
+\usepackage{bm}        % for math
+\usepackage{amssymb}   % for math
+\usepackage{amsmath}   % for math
+\usepackage{physics}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}    % d for derivative
+\renewcommand{\vec}[1]{\vectorbold*{#1}} % vectors
+\renewcommand{\op}[1]{\vectorbold*{\hat#1}} % operators
+
 \usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 % For Bibliography
 \usepackage[american]{babel}
 \usepackage{csquotes}
 \usepackage[style=phys, citestyle=phys,%
     articletitle=false, biblabel=brackets, chaptertitle=false, pageranges=false, %APS style
-    backend=bibtex8, bibencoding=ascii, doi=false, url=false, eprint=false]{biblatex}
-\addbibresource{../bibs/references.bib}
+    backend=biber, bibencoding=ascii, doi=false, url=false, eprint=false]{biblatex}
+\addbibresource{../bibs/bib_EuS.bib}
 
 \usepackage{color}
 \usepackage[colorlinks=true, breaklinks=true, bookmarks=false, linkcolor=blue, urlcolor=blue, citecolor=blue,]{hyperref}
+
+\usepackage{caption} %
     
 \begin{document}
 \title{Re: EuS Magnetic Properties}
 \author{Qi Yang}
 \maketitle
-\section
+\section{Shape Anisotropy}
+From a phenomenological point of view, I think one possible reason why the EuS thin films show finite perpendicular components of magnetization is due to its relatively large coercive field. Here an order-of-magnitude argument is outlined.
 
+Consider a disk of radius $r_0$ and thickness $t=2r_0$: roughly speaking such disk is similar to a sphere, therefore does not have significant shape anisotropy. Now extend the disk to a whole thin film, and take the mean field approximation, such that the thin film has an uniform magnetization of $\vec{M}$. For a magnetic dipole moment $\vec{m}$ at the center of the disk, due to dipole-dipole interaction, the difference in energy between an in-plane ferromagnetism and an out-of-plane one is imposed by the part of the thin film that is outside the disk:
+\begin{align}
+    \Delta U &= U_\parallel - U_\perp\\
+        &\approx -\frac{3\mu_0}{4\pi}\int_V\frac{1}{|\vec{r}|^3}(\vec{m}\cdot\op{r})(\vec{M}\cdot\op{r})\diff \vec{r}^3\\
+        &= -\frac{3\mu_0}{4\pi}\int_{r_0}^\infty\int_0^{2\pi}\frac{2r_0mM}{r^3}\cos^2\theta~r\diff r\diff\theta\\
+        &= -\frac{3\mu_0mMr_0}{2\pi}\int_{r_0}^\infty r^{-2}\diff r\int_0^{2\pi} \frac{1+\cos2\theta}{2}\diff\theta\\
+        &= -\frac{3\mu_0mM}{2}\\
+        &\sim -\mu_0mM\label{eq:ani}~.
+\end{align}
+
+The energy cost to rotate such magnetic moment from being perpendicular to the film to being parallel is roughly:
+\begin{equation}
+    W \approx \mu_0mH_c~,\label{eq:work}
+\end{equation}
+where $H_c$ is the coercive field.
+
+If I take the magnetization of single-crystalline EuS at $T=1.4\mathrm{K}$ in ref.~\cite{EuS_Shafer}, $M = 210~\mathrm{Oe}$, and read the coercive field at the perpendicular direction from figure~4.4a in my thesis, $H_c \approx 500~\mathrm{Oe}$, then the energy scales in equations \ref{eq:ani} and \ref{eq:work} are on the same order of magnitude. Hence it is a possibility that the hardness in the perpendicular magnetization prevents the local moments from tilting to parallel by the shape anisotropy.
 
 \printbibliography
 \end{document}
