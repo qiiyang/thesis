@@ -83,6 +83,9 @@ if __name__ == '__main__':
     #xminorLocator = MultipleLocator(5)
     #xminor_locator = AutoMinorLocator(2)
     
+    #colors = ["#6b1799", "#1f4299", "#12b812", "#e6c217", "#e67517", "#e61717"]
+    colors = [pal.xrd_eus, pal.s1, pal.s2, pal.s4, pal.s3, "#f14d4d"]
+    
     mi_columns = {0:"H", 1:"mr", 3:"err"}
     
     # Figure configs
@@ -196,7 +199,7 @@ if __name__ == '__main__':
     
     # 0d
     fn = r"angles/20130516_13_RvH_4K_0D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
-    co = "#6b1799"
+    co = colors[0]
     cos = np.cos(0.0 * np.pi / 180.0)
     ls = "-"
     mk = "o"
@@ -206,7 +209,7 @@ if __name__ == '__main__':
     
     # 30d
     fn = r"angles/20130516_11_RvH_4K_30D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
-    co = "#1f4299"
+    co = colors[1]
     cos = np.cos(27.0 * np.pi / 180.0)
     ls = "--"
     mk = "s"
@@ -216,7 +219,7 @@ if __name__ == '__main__':
     # 45d
     #fn = r"angles/20130516_10_RvH_4K_45D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
     fn = r"angles/20130518_05_RvH_4K_225D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
-    co = "#12b812"
+    co = colors[2]
     cos = np.cos(42.0 * np.pi / 180.0)
     ls = "-"
     mk = "^"
@@ -226,7 +229,7 @@ if __name__ == '__main__':
     # 60d
     #fn = r"angles/20130516_09_RvH_4K_60D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
     fn = r"angles/20130518_04_RvH_4K_240D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
-    co = "#e6c217"
+    co = colors[3]
     cos = np.cos(55.0 * np.pi / 180.0)
     ls = "--"
     mk = "v"
@@ -236,7 +239,7 @@ if __name__ == '__main__':
     # 70d
     #fn = r"angles/20130516_08_RvH_4K_70D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
     fn = r"angles/20130518_03_RvH_4K_250D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
-    co = "#e67517"
+    co = colors[4]
     cos = np.cos(61.0 * np.pi / 180.0)
     ls = "-"
     mk = "d"
@@ -246,7 +249,7 @@ if __name__ == '__main__':
     # 89d
     #fn = r"angles/20130516_07_RvH_4K_90D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
     fn = r"angles/20130518_02_RvH_4K_270D_Ch1.temp_Ch2.11P.EuS11.Al2O3.xx_Ch3.11P.EuS11.Al2O3.xy.dat"
-    co = "#e61717"
+    co = colors[5]
     mk = "x"
     cos = np.cos(72.0 * np.pi / 180.0)
     ls = "--"

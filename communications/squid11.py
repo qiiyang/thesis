@@ -46,9 +46,9 @@ if __name__ == '__main__':
     #sub_b.text(0.13, 0.18, "(a)", transform=sub_b.transAxes, ha="center", va="center", size="large")
     #sub_b.text(16, 1.2, r"$T_C \approx 14.5$~K", ha="left", va="center", bbox=dict(facecolor="#ffffff", edgecolor='none', pad=0.2))
     
-    sub_b.set_xlim([10, 21])
+    sub_b.set_xlim([10, 40])
     #sub_b.set_ylim([0, 30])
-    sub_b.set_ylim([0, 7])
+    #sub_b.set_ylim([0, 60])
     
     sub_b.tick_params('both', which="both", direction="in", pad=1, bottom=True, top=True, left=True, right=False)
     sub_b.set_xlabel(r"$T$ (K)", labelpad=0.1)
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     
     fn1 = r"130614_03_EuS11Sap_IS_MvT_warmup.rso.dat"
     data = mpms.loadfile_rso(fn1)
-    data = data.mask(data["T"] < 21)
+    data = data.mask(data["T"] < 40)
     sub_b.errorbar(data["T"], M_unit / (data["M"] + 4.096371e-006), yerr=NSE * data["err_M"] / (data["M"] + 4.096371e-006)**2 * M_unit, color="C0", marker="x", markersize=markersize, markerfacecolor="none", linestyle="None", linewidth=1, zorder=1)
     #sub_b.errorbar(data["T"], (data["M"] + 4.096371e-006) / M_unit, yerr=NSE * data["err_M"] / M_unit, color="C0", marker="x", markersize=markersize, markerfacecolor="none", linestyle="None", linewidth=1, zorder=1)
     
@@ -74,5 +74,5 @@ if __name__ == '__main__':
     
     fig.set_tight_layout(tight)
     
-    #fig.savefig(r'squid.pdf', format='pdf')
-    fig.savefig(r'squid.svg', format='svg')
+    fig.savefig(r'squid.pdf', format='pdf')
+    #fig.savefig(r'squid.svg', format='svg')
