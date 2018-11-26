@@ -37,38 +37,38 @@ if __name__ == '__main__':
     gs1 = gridspec.GridSpec(1, 1)
     gs1.update(wspace=0.0, hspace=0.0)
     
-    sub_b = fig.add_subplot(gs1[0, 0])
+    sub_a = fig.add_subplot(gs1[0, 0])
     
     M_unit = 1.e-5
     H_unit = 1.e4
     
     # Sub fig b
-    #sub_b.text(0.13, 0.18, "(a)", transform=sub_b.transAxes, ha="center", va="center", size="large")
-    #sub_b.text(16, 1.2, r"$T_C \approx 14.5$~K", ha="left", va="center", bbox=dict(facecolor="#ffffff", edgecolor='none', pad=0.2))
+    #sub_a.text(0.13, 0.18, "(a)", transform=sub_a.transAxes, ha="center", va="center", size="large")
+    #sub_a.text(16, 1.2, r"$T_C \approx 14.5$~K", ha="left", va="center", bbox=dict(facecolor="#ffffff", edgecolor='none', pad=0.2))
     
-    sub_b.set_xlim([10, 40])
-    #sub_b.set_ylim([0, 30])
-    #sub_b.set_ylim([0, 60])
+    sub_a.set_xlim([10, 25])
+    #sub_a.set_ylim([0, 30])
+    #sub_a.set_ylim([0, 60])
     
-    sub_b.tick_params('both', which="both", direction="in", pad=1, bottom=True, top=True, left=True, right=False)
-    sub_b.set_xlabel(r"$T$ (K)", labelpad=0.1)
-    sub_b.set_ylabel(r"$1 / M_z$ (arb. unit)", labelpad=1.0)
+    sub_a.tick_params('both', which="both", direction="in", pad=1, bottom=True, top=True, left=True, right=False)
+    sub_a.set_xlabel(r"$T$ (K)", labelpad=0.1)
+    sub_a.set_ylabel(r"$1 / M_z$ (arb. unit)", labelpad=1.0)
     
     xminor_locator = AutoMinorLocator(10)
-    sub_b.xaxis.set_minor_locator(xminor_locator)
+    sub_a.xaxis.set_minor_locator(xminor_locator)
     yminor_locator = AutoMinorLocator(5)
-    sub_b.yaxis.set_minor_locator(yminor_locator)
+    sub_a.yaxis.set_minor_locator(yminor_locator)
     
     
     fn1 = r"130614_03_EuS11Sap_IS_MvT_warmup.rso.dat"
     data = mpms.loadfile_rso(fn1)
-    data = data.mask(data["T"] < 40)
-    sub_b.errorbar(data["T"], M_unit / (data["M"] + 4.096371e-006), yerr=NSE * data["err_M"] / (data["M"] + 4.096371e-006)**2 * M_unit, color="C0", marker="x", markersize=markersize, markerfacecolor="none", linestyle="None", linewidth=1, zorder=1)
-    #sub_b.errorbar(data["T"], (data["M"] + 4.096371e-006) / M_unit, yerr=NSE * data["err_M"] / M_unit, color="C0", marker="x", markersize=markersize, markerfacecolor="none", linestyle="None", linewidth=1, zorder=1)
+    data = data.mask(data["T"] < 25)
+    sub_a.errorbar(data["T"], M_unit / (data["M"] + 4.096371e-006), yerr=NSE * data["err_M"] / (data["M"] + 4.096371e-006)**2 * M_unit, color="C0", marker="x", markersize=markersize, markerfacecolor="none", linestyle="None", linewidth=1, zorder=1)
+    #sub_a.errorbar(data["T"], (data["M"] + 4.096371e-006) / M_unit, yerr=NSE * data["err_M"] / M_unit, color="C0", marker="x", markersize=markersize, markerfacecolor="none", linestyle="None", linewidth=1, zorder=1)
     
     #xs = np.arange(12, 40, 0.1)
     #ys = (xs - 15.6823) / 1.40649
-    #sub_b.plot(xs, ys, color="k", marker=None)
+    #sub_a.plot(xs, ys, color="k", marker=None)
     
     #plt.legend()
     
