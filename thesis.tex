@@ -1,6 +1,7 @@
 ﻿\documentclass{report}
-
 \usepackage[online]{suthesis-2e}
+%\usepackage{suthesis-2e}
+
 \usepackage[utf8]{inputenc}
 
 \usepackage{epigraph}
@@ -72,15 +73,17 @@
 
 \beforepreface
 %\input{tex_misc/ch_dedication.tex}
-
+%
 \prefacesection{Abstract}
     \input{tex_misc/abstract.tex}
-
+%
 \prefacesection{Acknowledgments}
-    I would like to thank...
+\epigraph{``Von Herzen---M\"oge es wieder—--Zu Herzen gehn!''}{Ludwig van Beethoven (1770--1827)}~\\
+    \input{tex_misc/ch_acknowledgements.tex.tex}
+%
 \afterpreface
 \captionsetup{width=0.95\columnwidth}%
-
+%
 \chapter{Introduction}\label{ch:intro}
 \epigraph{``Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.''}{Marie Curie (1867--1934)}~\\
 %\begin{refsection}
